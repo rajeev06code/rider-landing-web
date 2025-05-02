@@ -81,7 +81,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-border/40 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Riderly Rides. All rights reserved. Crafted with ❤️ in India.
+            © {currentYear} Riderly Rides. All rights reserved. Crafted with ❤️ in Bihar.
           </p>
         </div>
       </div>
