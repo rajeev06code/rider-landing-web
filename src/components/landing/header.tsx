@@ -42,7 +42,7 @@ export default function Header() {
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
            <Button className="hidden md:inline-flex" variant="secondary">Driver Sign Up</Button>
-           <Button className="hidden md:inline-flex">Book Now</Button>
+           {/* Removed "Book Now" button */}
            {/* Mobile Menu */}
            <Sheet>
             <SheetTrigger asChild>
@@ -82,7 +82,7 @@ export default function Header() {
                   Download
                 </Link>
                  <Button className="w-full mt-4" variant="secondary">Driver Sign Up</Button>
-                 <Button className="w-full">Book Now</Button>
+                 {/* Removed "Book Now" button */}
               </nav>
             </SheetContent>
           </Sheet>

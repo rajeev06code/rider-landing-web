@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { MapPin, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -15,23 +14,16 @@ export default function Hero() {
           <br />
           <span className="font-semibold text-secondary">भारत भर में आपकी भरोसेमंद सवारी, बस एक टैप दूर।</span>
         </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-           <div className="relative flex-1">
-             <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-             <Input type="text" placeholder="Enter pickup location" className="pl-10 pr-4 py-2" />
-          </div>
-           <div className="relative flex-1">
-             <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-             <Input type="text" placeholder="Enter drop location" className="pl-10 pr-4 py-2" />
-          </div>
-        </div>
-         <div className="flex gap-4">
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            Find Ride <ArrowRight className="ml-2 h-5 w-5" />
+         <div className="flex gap-4 pt-4">
+           {/* Removed Input fields for pickup/drop */}
+          {/* Removed "Find Ride" button */}
+          <Button size="lg" variant="default" asChild>
+            {/* Changed variant to default and linked to download section */}
+            <a href="#download">
+              Download App <ArrowRight className="ml-2 h-5 w-5" />
+             </a>
           </Button>
-          <Button size="lg" variant="outline">
-            Download App
-          </Button>
+          {/* Optional: Keep a secondary action or remove */}
         </div>
       </div>
       <div className="flex justify-center lg:justify-end">
