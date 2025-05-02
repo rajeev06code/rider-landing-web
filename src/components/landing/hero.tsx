@@ -35,9 +35,9 @@ export default function Hero() {
          {/* Background shape - more subtle */}
          <div className="absolute inset-0 -z-10 transform -rotate-12 scale-125 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-full blur-3xl opacity-40"></div>
         <Image
-          src="https://picsum.photos/seed/rideapphero/600/500" // Changed placeholder seed
-          alt="Modern illustration showing a person booking a ride on the Chalo India app with a stylized city background and map elements" // Updated alt text
-          data-ai-hint="ride sharing app booking illustration modern city india phone map route auto bike stylized" // Updated AI hint
+          src="https://picsum.photos/seed/bikeTaxiCouple/600/500" // Using picsum placeholder, updated seed
+          alt="Illustration of a couple riding a bike taxi in a city" // Updated alt text
+          data-ai-hint="bike taxi illustration couple ride india city destination" // Updated AI hint reflecting the provided image
           width={600}
           height={500}
           className="rounded-xl shadow-2xl object-cover aspect-[6/5] transform transition-transform duration-500 ease-in-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/20"
