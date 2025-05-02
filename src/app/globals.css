@@ -8,73 +8,76 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Pure White */
-    --foreground: 240 10% 3.9%; /* Dark grayish-blue */
-    --card: 0 0% 100%;
+    /* Light Theme - Based on inversion of dark theme */
+    --background: 0 0% 98%; /* Near White */
+    --foreground: 240 10% 3.9%; /* Dark Grayish Blue */
+    --card: 0 0% 100%; /* White */
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 281 51% 33%; /* New Purple */
-    --primary-foreground: 0 0% 100%; /* White for contrast on Purple */
-    --secondary: 180 85% 30%; /* Slightly richer Teal */
-    --secondary-foreground: 0 0% 98%; /* Near white for contrast on Teal */
+    --primary: 165 70% 35%; /* Darker Teal for contrast on light bg */
+    --primary-foreground: 0 0% 98%; /* Near white for contrast on Teal */
+    --secondary: 210 40% 96.1%; /* Light gray */
+    --secondary-foreground: 240 10% 3.9%; /* Dark Grayish Blue */
     --muted: 210 40% 97%; /* Lighter grayish blue */
     --muted-foreground: 215.4 16.3% 50%; /* Slightly darker muted text */
-    --accent: 300 100% 55%; /* Slightly brighter Magenta */
-    --accent-foreground: 0 0% 100%; /* White for contrast on Magenta */
+    --accent: 165 70% 45%; /* Teal */
+    --accent-foreground: 0 0% 100%; /* White for contrast on Teal */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 214.3 31.8% 91.4%; /* Light gray */
     --input: 214.3 31.8% 91.4%; /* Light gray */
-    --ring: 281 51% 33%; /* New Purple for focus rings */
-    --chart-1: 281 51% 33%; /* New Purple */
-    --chart-2: 180 85% 30%; /* Deep Teal */
-    --chart-3: 300 100% 55%; /* Magenta */
-    --chart-4: 43 74% 66%; /* Complementary Orange/Yellow */
-    --chart-5: 210 40% 56.1%; /* Muted blue */
-    --radius: 0.75rem; /* Slightly larger radius */
+    --ring: 165 70% 35%; /* Darker Teal for focus rings */
+    --chart-1: 165 70% 35%; /* Darker Teal */
+    --chart-2: 210 40% 56.1%; /* Muted blue */
+    --chart-3: 43 74% 66%; /* Orange/Yellow */
+    --chart-4: 300 100% 70%; /* Magenta */
+    --chart-5: 0 84.2% 60.2%; /* Red */
+    --radius: 0.5rem; /* Adjusted radius */
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 240 10% 3.9%;
-    --sidebar-primary: 281 51% 33%; /* New Purple */
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 165 70% 35%;
+    --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 210 40% 97%;
     --sidebar-accent-foreground: 240 10% 3.9%;
     --sidebar-border: 214.3 31.8% 91.4%;
-    --sidebar-ring: 281 51% 33%; /* New Purple */
+    --sidebar-ring: 165 70% 35%;
   }
   .dark {
-    --background: 240 10% 3.9%; /* Dark blue-gray */
+    /* Dark Theme - Based on the provided image */
+    --background: 220 15% 5%; /* Very Dark Blue/Black */
     --foreground: 0 0% 98%; /* Near white */
-    --card: 240 10% 6%; /* Slightly darker card */
+    --card: 220 15% 8%; /* Slightly lighter dark card */
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
+    --popover: 220 15% 5%;
     --popover-foreground: 0 0% 98%;
-    --primary: 281 51% 45%; /* Lighter Purple for dark mode */
-    --primary-foreground: 0 0% 100%; /* White */
-    --secondary: 180 80% 35%; /* Brighter Teal for dark mode */
+    --primary: 165 70% 45%; /* Teal/Green Accent */
+    --primary-foreground: 220 15% 5%; /* Dark text on primary buttons */
+    --secondary: 217.2 32.6% 17.5%; /* Darker grayish blue */
     --secondary-foreground: 0 0% 98%; /* Near white */
     --muted: 217.2 32.6% 17.5%; /* Darker grayish blue */
     --muted-foreground: 215 20.2% 65.1%; /* Lighter grayish blue */
-    --accent: 300 100% 70%; /* Lighter Magenta */
-    --accent-foreground: 0 0% 100%; /* White */
-    --destructive: 0 62.8% 30.6%;
+    --accent: 165 70% 45%; /* Teal/Green Accent */
+    --accent-foreground: 220 15% 5%; /* Dark text for contrast on accent */
+    --destructive: 0 62.8% 50.6%; /* Slightly brighter red */
     --destructive-foreground: 0 0% 98%;
     --border: 217.2 32.6% 17.5%; /* Darker gray */
     --input: 217.2 32.6% 17.5%; /* Darker gray */
-    --ring: 281 51% 45%; /* Lighter Purple */
-    --chart-1: 281 51% 45%; /* Lighter Purple */
-    --chart-2: 180 80% 35%;
-    --chart-3: 300 100% 70%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 210 40% 56.1%;
-    --sidebar-background: 240 10% 3.9%;
+    --ring: 165 70% 50%; /* Slightly brighter Teal for focus rings */
+    --chart-1: 165 70% 45%; /* Teal */
+    --chart-2: 210 40% 56.1%; /* Muted blue */
+    --chart-3: 43 74% 66%; /* Orange/Yellow */
+    --chart-4: 300 100% 70%; /* Magenta */
+    --chart-5: 0 62.8% 50.6%; /* Red */
+    --radius: 0.5rem; /* Adjusted radius */
+    --sidebar-background: 220 15% 5%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 281 51% 45%; /* Lighter Purple */
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 165 70% 45%;
+    --sidebar-primary-foreground: 220 15% 5%;
     --sidebar-accent: 217.2 32.6% 17.5%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 217.2 32.6% 17.5%;
-    --sidebar-ring: 281 51% 50%; /* Slightly brighter purple ring for dark mode */
+    --sidebar-ring: 165 70% 50%;
   }
 }
 
@@ -93,3 +96,4 @@ body {
 }
 
 /* Keyframes remain in tailwind.config.ts */
+
