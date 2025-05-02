@@ -68,19 +68,19 @@ export default function DriverSignupForm() {
   }
 
   return (
-    <section id="driver-signup" className="container py-16 md:py-24 bg-background">
+    <section id="driver-signup" className="container py-16 md:py-10 bg-background">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Side: Info */}
         <div className="space-y-6 animate-fade-slide-up motion-safe:delay-100">
           <div className="inline-flex items-center rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
-            <IndianRupee className="h-4 w-4 mr-2" /> Earn with Chalo India
+            <IndianRupee className="h-4 w-4 mr-2" /> Earn with Riderly
           </div>
           <h2 className="text-3xl md:text-4xl font-bold">Join Our Driver Team!</h2>
           <h3 className="text-2xl md:text-3xl font-semibold text-secondary">
             हमारे ड्राइवर टीम में शामिल हों!
           </h3>
           <p className="text-lg text-muted-foreground">
-            Become a Chalo India driver partner and earn flexibly on your own schedule. Drive your bike or auto and be your own boss.
+            Become a Riderly driver partner and earn flexibly on your own schedule. Drive your bike or auto and be your own boss.
              <br />
              <span className="font-medium">चलो इंडिया ड्राइवर पार्टनर बनें और अपने समय पर लचीले ढंग से कमाएं।</span>
           </p>

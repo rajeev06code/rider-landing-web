@@ -37,7 +37,7 @@ export default function Features() {
   return (
     <section id="features" className="container py-16 md:py-24 bg-muted/20">
       <div className="text-center mb-12 motion-safe:animate-fade-slide-up">
-        <h2 className="text-3xl md:text-4xl font-bold">Why Choose Chalo India?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">Why Choose Riderly?</h2>
         <p className="text-lg text-muted-foreground mt-2">क्यों चुनें चलो इंडिया?</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

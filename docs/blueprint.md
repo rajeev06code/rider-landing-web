@@ -1,4 +1,4 @@
-# **App Name**: Chalo India Rides
+# **App Name**: Riderly Rides
 
 ## Core Features:
 

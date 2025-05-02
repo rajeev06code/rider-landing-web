@@ -9,21 +9,21 @@ export default function TermsPage() {
         <h1 className="text-3xl md:text-4xl font-bold mb-8">Terms and Conditions</h1>
         <div className="prose dark:prose-invert max-w-none space-y-4">
           <p>
-            Welcome to Chalo India Rides! These terms and conditions outline the rules and regulations for the use of Chalo India Rides's Website and App.
+            Welcome to Riderly Rides! These terms and conditions outline the rules and regulations for the use of Riderly Rides's Website and App.
           </p>
           <p>
-            By accessing this website/app we assume you accept these terms and conditions. Do not continue to use Chalo India Rides if you do not agree to take all of the terms and conditions stated on this page.
+            By accessing this website/app we assume you accept these terms and conditions. Do not continue to use Riderly Rides if you do not agree to take all of the terms and conditions stated on this page.
           </p>
           <h2 className="text-2xl font-semibold mt-6">License</h2>
           <p>
-            Unless otherwise stated, Chalo India Rides and/or its licensors own the intellectual property rights for all material on Chalo India Rides. All intellectual property rights are reserved. You may access this from Chalo India Rides for your own personal use subjected to restrictions set in these terms and conditions.
+            Unless otherwise stated, Riderly Rides and/or its licensors own the intellectual property rights for all material on Riderly Rides. All intellectual property rights are reserved. You may access this from Riderly Rides for your own personal use subjected to restrictions set in these terms and conditions.
           </p>
            <p>You must not:</p>
           <ul>
-              <li>Republish material from Chalo India Rides</li>
-              <li>Sell, rent or sub-license material from Chalo India Rides</li>
-              <li>Reproduce, duplicate or copy material from Chalo India Rides</li>
-              <li>Redistribute content from Chalo India Rides</li>
+              <li>Republish material from Riderly Rides</li>
+              <li>Sell, rent or sub-license material from Riderly Rides</li>
+              <li>Reproduce, duplicate or copy material from Riderly Rides</li>
+              <li>Redistribute content from Riderly Rides</li>
           </ul>
           <h2 className="text-2xl font-semibold mt-6">User Responsibilities</h2>
            <p>...</p>

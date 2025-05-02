@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      { // Add freepik domain
+        protocol: 'https',
+        hostname: 'sdmntprsouthcentralus.oaiusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

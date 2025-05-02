@@ -3,55 +3,46 @@
 @tailwind utilities;
 
 body {
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 @layer base {
   :root {
     /* Light Theme with Purple Accent */
-    --background: 0 0% 100%; /* White */
-    --foreground: 222.2 84% 4.9%; /* Dark Slate Gray */
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 222.2 84% 4.9%; /* Dark Slate Gray */
-    --popover: 0 0% 100%; /* White */
-    --popover-foreground: 222.2 84% 4.9%; /* Dark Slate Gray */
-    --primary: 293 60% 50%; /* Purple Accent */
-    --primary-foreground: 0 0% 98%; /* Light Gray/White for contrast on purple */
-    --secondary: 210 40% 96.1%; /* Very Light Grayish Blue */
-    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark Blue */
-    --muted: 210 40% 96.1%; /* Very Light Grayish Blue */
-    --muted-foreground: 215.4 16.3% 46.9%; /* Medium Grayish Blue */
-    --accent: 293 60% 50%; /* Purple Accent */
-    --accent-foreground: 0 0% 98%; /* Light Gray/White */
-    --destructive: 0 84.2% 60.2%; /* Red */
-    --destructive-foreground: 0 0% 98%; /* Light Gray/White */
-    --border: 214.3 31.8% 91.4%; /* Light Gray */
-    --input: 214.3 31.8% 91.4%; /* Light Gray */
-    --ring: 293 60% 55%; /* Slightly lighter Purple for focus rings */
-    --chart-1: 293 60% 50%; /* Purple */
-    --chart-2: 210 40% 56.1%; /* Muted blue */
-    --chart-3: 43 74% 66%; /* Orange/Yellow */
-    --chart-4: 165 70% 45%; /* Teal/Green */
-    --chart-5: 0 62.8% 50.6%; /* Red */
+    --background: 25 18% 95%;
+    --foreground: 25 15% 25%;
+    --card: 25 18% 90%;
+    --card-foreground: 25 15% 25%;
+    --popover: 25 18% 90%;
+    --popover-foreground: 25 15% 25%;
+    --primary: 72, 34%, 55%;
+    --primary-foreground: 25 15% 25%;
+    --secondary: 25 15% 25%;
+    --secondary-foreground: 25 18% 95%;
+    --muted: 25 18% 90%;
+    --muted-foreground: 25 15% 25%;
+    --accent: 25 18% 90%;
+    --accent-foreground: 25 15% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 25 15% 25%;
+    --input: 25 15% 25%;
+    --ring: 72, 34%, 55%; /* Slightly lighter Purple for focus rings */
+    --chart-1: 43 74% 66%;
+    --chart-2: 210 40% 96.1%;
+    --chart-3: 43 74% 66%;
+    --chart-4: 165 70% 45%;
+    --chart-5: 0 62.8% 50.6%;
     --radius: 0.5rem;
     /* Sidebar Specific - Assuming light sidebar */
-    --sidebar-background: 0 0% 100%; /* White */
-    --sidebar-foreground: 222.2 84% 4.9%; /* Dark Slate Gray */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222.2 84% 4.9%;
     --sidebar-primary: 293 60% 50%; /* Purple */
     --sidebar-primary-foreground: 0 0% 98%; /* Light Gray/White */
     --sidebar-accent: 210 40% 96.1%; /* Very Light Grayish Blue */
     --sidebar-accent-foreground: 222.2 47.4% 11.2%; /* Dark Blue */
     --sidebar-border: 214.3 31.8% 91.4%; /* Light Gray */
     --sidebar-ring: 293 60% 55%; /* Slightly lighter Purple */
-  }
-
-  .dark {
-     /* You can optionally define dark mode variables here if needed later */
-     /* Example:
-     --background: 220 15% 5%;
-     --foreground: 0 0% 98%;
-     ... and so on
-     */
   }
 }
 

@@ -17,7 +17,7 @@ const testimonials = [
     name: "Priya Sharma",
     initials: "PS",
     location: "Delhi",
-    quote: "Chalo India is my go-to app for daily commute. Super fast bikes and always available!",
+    quote: "Riderly is my go-to app for daily commute. Super fast bikes and always available!",
     quoteHi: "चलो इंडिया मेरे दैनिक आवागमन के लिए मेरा पसंदीदा ऐप है। सुपर फास्ट बाइक और हमेशा उपलब्ध!",
     image: "https://picsum.photos/seed/priyasharma/100/100", // Seeded placeholder
     aiHint: "smiling indian woman professional urban", // Updated hint
@@ -35,7 +35,7 @@ const testimonials = [
     name: "Anjali Singh",
     initials: "AS",
     location: "Bangalore",
-    quote: "I feel safe using Chalo India. The drivers are professional and the app has great safety features.",
+    quote: "I feel safe using Riderly. The drivers are professional and the app has great safety features.",
     quoteHi: "मुझे चलो इंडिया का उपयोग करके सुरक्षित महसूस होता है। ड्राइवर पेशेवर हैं और ऐप में बेहतरीन सुरक्षा सुविधाएँ हैं।",
      image: "https://picsum.photos/seed/anjalisingh/100/100", // Seeded placeholder
     aiHint: "happy indian female student young", // Updated hint

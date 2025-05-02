@@ -52,7 +52,7 @@ export default function ContactPage() {
               <CardTitle>Our Office</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground">Chalo India Rides HQ</p>
+              <p className="text-muted-foreground">Riderly Rides HQ</p>
               <p>123 Tech Park, Cyber City</p>
               <p>Gurugram, Haryana, India</p>
             </CardContent>

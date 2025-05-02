@@ -5,7 +5,7 @@ const steps = [
     icon: <Smartphone className="h-10 w-10 text-primary" />,
     title: "Download the App",
     titleHi: "ऐप डाउनलोड करें",
-    description: "Get the Chalo India Rides app from the App Store or Google Play.",
+    description: "Get the Riderly Rides app from the App Store or Google Play.",
     descriptionHi: "ऐप स्टोर या गूगल प्ले से चलो इंडिया राइड्स ऐप प्राप्त करें।",
   },
   {

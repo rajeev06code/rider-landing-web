@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center space-x-2 group mb-2">
               <AutoIcon className="h-8 w-8 text-primary transition-transform duration-300 group-hover:rotate-[15deg]" />
-              <span className="text-xl font-bold transition-colors duration-300 group-hover:text-primary">Chalo India Rides</span>
+              <span className="text-xl font-bold transition-colors duration-300 group-hover:text-primary">Riderly Rides</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Your reliable partner for affordable and convenient bike and auto rides across India. Safar Karo, Befikar Raho!
@@ -81,7 +81,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-border/40 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Chalo India Rides. All rights reserved. Crafted with ❤️ in India.
+            © {currentYear} Riderly Rides. All rights reserved. Crafted with ❤️ in India.
           </p>
         </div>
       </div>

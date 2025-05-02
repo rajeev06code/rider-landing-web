@@ -4,6 +4,7 @@
 import * as React from "react"
 
 import type {
+  Theme,
   ToastActionElement,
   ToastProps,
 } from "@/components/ui/toast"
@@ -190,5 +191,6 @@ function useToast() {
     dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
   }
 }
+
 
 export { useToast, toast }

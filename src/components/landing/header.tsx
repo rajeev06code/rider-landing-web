@@ -14,7 +14,7 @@ export default function Header() {
              {/* Slightly larger icon */}
              <AutoIcon className="h-8 w-8 text-primary transition-transform duration-300 group-hover:rotate-[15deg]" />
              {/* Larger font size */}
-            <span className="text-xl font-bold transition-colors duration-300 group-hover:text-primary">Chalo India Rides</span>
+            <span className="text-xl font-bold transition-colors duration-300 group-hover:text-primary">Riderly</span> 
           </Link>
            {/* Adjusted navigation styling */}
           <nav className="hidden gap-8 text-base font-medium md:flex ml-auto"> {/* Added ml-auto */}
@@ -60,7 +60,7 @@ export default function Header() {
               <nav className="flex flex-col gap-6 pt-12"> {/* Increased gap and padding */}
                  <Link href="/" className="flex items-center space-x-2 mb-6 group">
                    <AutoIcon className="h-7 w-7 text-primary transition-transform duration-300 group-hover:rotate-[15deg]" />
-                  <span className="text-lg font-bold transition-colors duration-300 group-hover:text-primary">Chalo India Rides</span>
+                  <span className="text-lg font-bold transition-colors duration-300 group-hover:text-primary">Riderly Rides</span>
                 </Link>
                 <Link
                   href="#features"

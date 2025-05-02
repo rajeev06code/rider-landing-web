@@ -9,7 +9,7 @@ export default function PrivacyPage() {
         <h1 className="text-3xl md:text-4xl font-bold mb-8">Privacy Policy</h1>
         <div className="prose dark:prose-invert max-w-none space-y-4">
           <p>
-            Your privacy is important to us. It is Chalo India Rides's policy to respect your privacy regarding any information we may collect from you across our website and app.
+            Your privacy is important to us. It is Riderly Rides's policy to respect your privacy regarding any information we may collect from you across our website and app.
           </p>
           <h2 className="text-2xl font-semibold mt-6">Information We Collect</h2>
           <p>
