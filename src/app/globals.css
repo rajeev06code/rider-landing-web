@@ -8,44 +8,44 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 98%; /* Slightly off-white for a clean look */
+    --background: 0 0% 100%; /* Pure White */
     --foreground: 240 10% 3.9%; /* Dark grayish-blue */
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 30 100% 60%; /* Saffron */
+    --primary: 30 100% 55%; /* Slightly brighter Saffron */
     --primary-foreground: 0 0% 100%; /* White for contrast on Saffron */
-    --secondary: 180 100% 25.1%; /* Deep Teal */
+    --secondary: 180 85% 30%; /* Slightly richer Teal */
     --secondary-foreground: 0 0% 98%; /* Near white for contrast on Teal */
-    --muted: 210 40% 96.1%; /* Light grayish blue */
-    --muted-foreground: 215.4 16.3% 46.9%; /* Medium grayish blue */
-    --accent: 300 100% 50%; /* Magenta */
+    --muted: 210 40% 97%; /* Lighter grayish blue */
+    --muted-foreground: 215.4 16.3% 50%; /* Slightly darker muted text */
+    --accent: 300 100% 55%; /* Slightly brighter Magenta */
     --accent-foreground: 0 0% 100%; /* White for contrast on Magenta */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 214.3 31.8% 91.4%; /* Light gray */
     --input: 214.3 31.8% 91.4%; /* Light gray */
-    --ring: 300 100% 50%; /* Magenta for focus rings */
-    --chart-1: 30 100% 60%; /* Saffron */
-    --chart-2: 180 100% 25.1%; /* Deep Teal */
-    --chart-3: 300 100% 50%; /* Magenta */
+    --ring: 30 100% 55%; /* Saffron for focus rings */
+    --chart-1: 30 100% 55%; /* Saffron */
+    --chart-2: 180 85% 30%; /* Deep Teal */
+    --chart-3: 300 100% 55%; /* Magenta */
     --chart-4: 43 74% 66%; /* Complementary Orange/Yellow */
     --chart-5: 210 40% 56.1%; /* Muted blue */
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.75rem; /* Slightly larger radius */
+    --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 240 10% 3.9%;
-    --sidebar-primary: 30 100% 60%;
+    --sidebar-primary: 30 100% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent: 210 40% 97%;
     --sidebar-accent-foreground: 240 10% 3.9%;
     --sidebar-border: 214.3 31.8% 91.4%;
-    --sidebar-ring: 300 100% 50%;
+    --sidebar-ring: 30 100% 55%;
   }
   .dark {
     --background: 240 10% 3.9%; /* Dark blue-gray */
     --foreground: 0 0% 98%; /* Near white */
-    --card: 240 10% 3.9%;
+    --card: 240 10% 6%; /* Slightly darker card */
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -61,7 +61,7 @@ body {
     --destructive-foreground: 0 0% 98%;
     --border: 217.2 32.6% 17.5%; /* Darker gray */
     --input: 217.2 32.6% 17.5%; /* Darker gray */
-    --ring: 300 100% 70%; /* Lighter Magenta */
+    --ring: 30 100% 60%; /* Saffron */
     --chart-1: 30 100% 60%;
     --chart-2: 180 80% 35%;
     --chart-3: 300 100% 70%;
@@ -74,7 +74,7 @@ body {
     --sidebar-accent: 217.2 32.6% 17.5%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 217.2 32.6% 17.5%;
-    --sidebar-ring: 300 100% 70%;
+    --sidebar-ring: 30 100% 70%;
   }
 }
 
@@ -86,4 +86,8 @@ body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  /* Removed global section animation rule */
 }
+
+/* Removed redundant keyframes and animation utility class */
+/* Animations are now defined and applied via tailwind.config.ts */

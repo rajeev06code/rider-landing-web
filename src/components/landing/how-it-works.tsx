@@ -34,19 +34,23 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="container py-16 md:py-24">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 animate-fade-slide-up">
         <h2 className="text-3xl md:text-4xl font-bold">Booking Kaise Karein?</h2>
          <p className="text-lg text-muted-foreground mt-2">How to Book a Ride?</p>
       </div>
       <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
          {/* Dashed line for larger screens - purely visual */}
-        <div className="absolute top-1/2 left-0 right-0 h-0.5 border-t-2 border-dashed border-primary/50 hidden lg:block mt-[-1px]" />
+        <div className="absolute top-1/2 left-0 right-0 h-0.5 border-t-2 border-dashed border-primary/30 hidden lg:block mt-[-1px]" />
 
         {steps.map((step, index) => (
-          <div key={index} className="relative flex flex-col items-center text-center p-6 bg-card rounded-lg shadow-sm border border-border/50">
+          <div
+            key={index}
+            className="relative flex flex-col items-center text-center p-6 bg-card rounded-lg shadow-lg border border-border/50 motion-safe:animate-fade-slide-up transform transition-transform duration-300 motion-safe:hover:scale-105"
+            style={{ animationDelay: `${index * 150}ms` }} // Staggered animation
+          >
              {/* Circle on the dashed line */}
-             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-primary border-2 border-background hidden lg:block z-10" />
-            <div className="mb-4 p-4 bg-primary/10 rounded-full inline-block">
+             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-primary border-4 border-background hidden lg:block z-10 shadow-md" />
+            <div className="mb-4 p-4 bg-primary/10 rounded-full inline-block transform transition-transform duration-300 group-hover:rotate-12">
               {step.icon}
             </div>
             <h3 className="text-xl font-semibold mb-2">{step.title} <span className="block text-lg text-secondary">{step.titleHi}</span></h3>

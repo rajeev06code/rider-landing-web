@@ -1,13 +1,11 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-// Using simple SVGs for store badges as lucide-react doesn't have them
 import GooglePlayIcon from "@/components/icons/google-play-icon";
 import AppleStoreIcon from "@/components/icons/apple-store-icon";
 
-
 export default function DownloadApp() {
   return (
-    <section id="download" className="container py-16 md:py-24 bg-primary text-primary-foreground">
+    <section id="download" className="container py-16 md:py-24 bg-gradient-to-br from-primary to-orange-500 text-primary-foreground rounded-lg shadow-xl my-16 md:my-24 animate-fade-slide-up">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold">Get Started Today!</h2>
@@ -21,7 +19,7 @@ export default function DownloadApp() {
             <Button
               variant="secondary"
               size="lg"
-              className="bg-background text-foreground hover:bg-background/90 justify-start px-4 py-3 h-auto text-left"
+              className="bg-background text-foreground hover:bg-background/90 justify-start px-4 py-3 h-auto text-left transform transition-transform duration-200 motion-safe:hover:scale-105 shadow-md"
               asChild
             >
               <a href="#" target="_blank" rel="noopener noreferrer">
@@ -35,7 +33,7 @@ export default function DownloadApp() {
              <Button
               variant="secondary"
               size="lg"
-              className="bg-background text-foreground hover:bg-background/90 justify-start px-4 py-3 h-auto text-left"
+              className="bg-background text-foreground hover:bg-background/90 justify-start px-4 py-3 h-auto text-left transform transition-transform duration-200 motion-safe:hover:scale-105 shadow-md"
               asChild
             >
               <a href="#" target="_blank" rel="noopener noreferrer">
@@ -49,13 +47,14 @@ export default function DownloadApp() {
           </div>
         </div>
         <div className="flex justify-center lg:justify-end">
+          {/* Use a more illustrative image */}
           <Image
-            src="https://picsum.photos/500/500"
-            alt="App Mockup"
-            data-ai-hint="smartphone app mockup india"
-            width={400}
-            height={400}
-            className="rounded-lg shadow-lg object-contain aspect-square"
+            src="https://picsum.photos/500/500" // Placeholder - replace with actual illustration if available
+            alt="Illustration of people using Chalo India app on phones"
+            data-ai-hint="mobile app download illustration india happy users"
+            width={350} // Adjusted size
+            height={350} // Adjusted size
+            className="rounded-lg object-contain aspect-square transform motion-safe:hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>

@@ -79,6 +79,14 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
+        'fade-in': {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        'slide-up': {
+          from: { transform: 'translateY(20px)' },
+          to: { transform: 'translateY(0)' },
+        },
   			'accordion-down': {
   				from: {
   					height: '0'
@@ -97,6 +105,7 @@ export default {
   			}
   		},
   		animation: {
+        'fade-slide-up': 'fade-in 0.6s ease-out forwards, slide-up 0.6s ease-out forwards',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		}

@@ -58,7 +58,7 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="container py-16 md:py-24 bg-secondary/5">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 animate-fade-slide-up">
         <h2 className="text-3xl md:text-4xl font-bold">Customer Kya Kehte Hain?</h2>
         <p className="text-lg text-muted-foreground mt-2">What Our Customers Say</p>
       </div>
@@ -76,16 +76,24 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1 h-full">
-                <Card className="h-full flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                 <Card className="h-full flex flex-col justify-between shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card border-border/50">
                    <CardContent className="flex flex-col items-center text-center p-6 space-y-4">
-                     <Avatar className="h-16 w-16 mb-4">
+                     <Avatar className="h-16 w-16 mb-4 border-2 border-primary/50">
                       <AvatarImage src={testimonial.image} alt={testimonial.name} data-ai-hint={testimonial.aiHint} />
                       <AvatarFallback>{testimonial.initials}</AvatarFallback>
                     </Avatar>
-                    <p className="text-foreground italic">"{testimonial.quote}"</p>
-                     <p className="text-secondary italic">"{testimonial.quoteHi}"</p>
-                     <div className="pt-2">
-                       <p className="font-semibold">{testimonial.name}</p>
+                    <blockquote className="text-foreground italic relative">
+                      <span className="absolute -top-2 -left-3 text-4xl text-primary/50 opacity-50">“</span>
+                      {testimonial.quote}
+                       <span className="absolute -bottom-2 -right-3 text-4xl text-primary/50 opacity-50">”</span>
+                    </blockquote>
+                     <blockquote className="text-secondary italic relative mt-2">
+                       <span className="absolute -top-2 -left-3 text-4xl text-secondary/50 opacity-50">“</span>
+                      {testimonial.quoteHi}
+                      <span className="absolute -bottom-2 -right-3 text-4xl text-secondary/50 opacity-50">”</span>
+                     </blockquote>
+                     <div className="pt-2 border-t border-border/30 w-full mt-4">
+                       <p className="font-semibold mt-4">{testimonial.name}</p>
                        <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                      </div>
                   </CardContent>
@@ -94,8 +102,8 @@ export default function Testimonials() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 hidden md:inline-flex" />
-        <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 hidden md:inline-flex" />
+        <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 hidden md:inline-flex bg-background/80 hover:bg-background" />
+        <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 hidden md:inline-flex bg-background/80 hover:bg-background" />
       </Carousel>
     </section>
   );

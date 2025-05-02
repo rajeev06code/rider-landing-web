@@ -6,42 +6,42 @@ import AutoIcon from "@/components/icons/auto-icon"; // Placeholder for custom i
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 animate-fade-in motion-safe:duration-500">
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-             <AutoIcon className="h-6 w-6 text-primary" />
-            <span className="font-bold">Chalo India Rides</span>
+          <Link href="/" className="mr-6 flex items-center space-x-2 group">
+             <AutoIcon className="h-6 w-6 text-primary transition-transform duration-300 group-hover:rotate-[15deg]" />
+            <span className="font-bold transition-colors duration-300 group-hover:text-primary">Chalo India Rides</span>
           </Link>
           <nav className="hidden gap-6 text-sm md:flex">
             <Link
               href="#features"
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
+              className="text-foreground/60 transition-colors hover:text-foreground/80 hover:text-primary"
             >
               Features
             </Link>
             <Link
               href="#how-it-works"
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
+              className="text-foreground/60 transition-colors hover:text-foreground/80 hover:text-primary"
             >
               Kaise Chalega?
             </Link>
              <Link
               href="#testimonials"
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
+              className="text-foreground/60 transition-colors hover:text-foreground/80 hover:text-primary"
             >
               Testimonials
             </Link>
             <Link
               href="#download"
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
+              className="text-foreground/60 transition-colors hover:text-foreground/80 hover:text-primary"
             >
               Download
             </Link>
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
-           <Button className="hidden md:inline-flex" variant="secondary">Driver Sign Up</Button>
+           <Button className="hidden md:inline-flex transform transition-transform duration-200 motion-safe:hover:scale-105" variant="secondary">Driver Sign Up</Button>
            {/* Removed "Book Now" button */}
            {/* Mobile Menu */}
            <Sheet>
@@ -53,31 +53,31 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-4 pt-8">
-                 <Link href="/" className="flex items-center space-x-2 mb-4">
-                   <AutoIcon className="h-6 w-6 text-primary" />
-                  <span className="font-bold">Chalo India Rides</span>
+                 <Link href="/" className="flex items-center space-x-2 mb-4 group">
+                   <AutoIcon className="h-6 w-6 text-primary transition-transform duration-300 group-hover:rotate-[15deg]" />
+                  <span className="font-bold transition-colors duration-300 group-hover:text-primary">Chalo India Rides</span>
                 </Link>
                 <Link
                   href="#features"
-                  className="block px-2 py-1 text-lg hover:bg-accent rounded-md"
+                  className="block px-2 py-1 text-lg hover:bg-accent rounded-md transition-colors duration-200"
                 >
                   Features
                 </Link>
                 <Link
                   href="#how-it-works"
-                  className="block px-2 py-1 text-lg hover:bg-accent rounded-md"
+                  className="block px-2 py-1 text-lg hover:bg-accent rounded-md transition-colors duration-200"
                 >
                   Kaise Chalega?
                 </Link>
                  <Link
                   href="#testimonials"
-                  className="block px-2 py-1 text-lg hover:bg-accent rounded-md"
+                  className="block px-2 py-1 text-lg hover:bg-accent rounded-md transition-colors duration-200"
                 >
                   Testimonials
                 </Link>
                 <Link
                   href="#download"
-                  className="block px-2 py-1 text-lg hover:bg-accent rounded-md"
+                  className="block px-2 py-1 text-lg hover:bg-accent rounded-md transition-colors duration-200"
                 >
                   Download
                 </Link>
