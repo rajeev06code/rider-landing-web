@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Riderly Rides - Privacy Policy",
+  description: "Riderly Rides Privacy Policy: Learn how we collect, use, and protect your information.",
+};
+
 import Header from "@/components/landing/header";
 import Footer from "@/components/landing/footer";
 
@@ -6,7 +13,6 @@ export default function PrivacyPage() {
     <div className="flex flex-col min-h-dvh">
       <Header />
       <main className="flex-1 container py-16 md:py-24">
-        <h1 className="text-3xl md:text-4xl font-bold mb-8">Privacy Policy</h1>
         <div className="prose dark:prose-invert max-w-none space-y-4">
           <p>
             Your privacy is important to us. It is Riderly Rides's policy to respect your privacy regarding any information we may collect from you across our website and app.
@@ -25,16 +31,21 @@ export default function PrivacyPage() {
               <li>Device information and usage data</li>
           </ul>
            <h2 className="text-2xl font-semibold mt-6">How We Use Your Information</h2>
-          <p>
-           We use the collected information to:
-          </p>
-           <ul>
-              <li>Provide, operate, and maintain our services</li>
-              <li>Improve, personalize, and expand our services</li>
-              <li>Understand and analyze how you use our services</li>
-              <li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the service, and for marketing and promotional purposes</li>
-              <li>Process your transactions</li>
-              <li>Find and prevent fraud</li>
+          <p>We use the collected information to:</p>
+          <ul>
+            <li>Provide, operate, and maintain our services.</li>
+            <li>Improve, personalize, and expand our services.</li>
+            <li>Understand and analyze how you use our services.</li>
+            <li>Process your transactions and manage payments.</li>
+            <li>
+              Communicate with you, either directly or through one of our partners,
+              including for customer service, to provide you with updates and other
+              information relating to the service, and for marketing and promotional
+              purposes.
+            </li>
+            <li>Find and prevent fraud.</li>
+            <li>Conduct research and analytics to understand usage patterns and trends.</li>
+            <li>Comply with applicable laws and regulations.</li>
           </ul>
            <h2 className="text-2xl font-semibold mt-6">Data Security</h2>
            <p>
@@ -45,6 +56,9 @@ export default function PrivacyPage() {
           <p>
             [More detailed privacy policy information will be added here.]
           </p>
+            <h2 className="text-2xl font-semibold mt-6">Contact Information</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at [Your Contact Email]</p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-8">Privacy Policy</h1>
           <p className="font-semibold mt-8">Last updated: {new Date().toLocaleDateString()}</p>
         </div>
       </main>
