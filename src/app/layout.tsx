@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Chalo India Rides",
-  description: "Book bike and auto rides easily across India.",
+  title: "Chalo India Rides - Easy Bike & Auto Booking",
+  description: "Instantly book affordable bike and auto rides across India with Chalo India Rides. Reliable, safe, and convenient travel at your fingertips. Download the app!",
 };
 
 export default function RootLayout({
