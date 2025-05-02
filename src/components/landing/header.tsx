@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link';
 import { Button, buttonVariants } from '@/components/ui/button';
 import AutoIcon from '@/components/icons/auto-icon';
