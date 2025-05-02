@@ -35,9 +35,9 @@ export default function Hero() {
          {/* Background shape - more subtle */}
          <div className="absolute inset-0 -z-10 transform -rotate-12 scale-125 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-full blur-3xl opacity-40"></div>
         <Image
-          src="https://picsum.photos/seed/bikeTaxiCouple/600/500" // Using picsum placeholder, updated seed
-          alt="Illustration of a couple riding a bike taxi in a city" // Updated alt text
-          data-ai-hint="bike taxi illustration couple ride india city destination" // Updated AI hint reflecting the provided image
+          src="https://img.freepik.com/free-vector/romantic-getaway-illustration-concept_114360-765.jpg?semt=ais_hybrid&w=740" // Updated image source
+          alt="Illustration of a couple on a romantic getaway with a scooter" // Updated alt text
+          data-ai-hint="romantic getaway couple scooter illustration travel love" // Updated AI hint
           width={600}
           height={500}
           className="rounded-xl shadow-2xl object-cover aspect-[6/5] transform transition-transform duration-500 ease-in-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/20"
