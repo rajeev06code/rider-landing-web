@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Bike, IndianRupee, ShieldCheck, Map } from "lucide-react"; // Changed AutoIcon to Map for wider availability
+import { Bike, IndianRupee, ShieldCheck, Map } from "lucide-react";
 import AutoIcon from "@/components/icons/auto-icon";
 
 const features = [
@@ -18,7 +18,7 @@ const features = [
     descriptionHi: "हर सवारी के लिए पारदर्शी और बजट-अनुकूल मूल्य निर्धारण।",
   },
    {
-    icon: <Map className="h-8 w-8 text-primary" />, // Using Map icon
+    icon: <Map className="h-8 w-8 text-primary" />,
     title: "Wide Availability",
     titleHi: "व्यापक उपलब्धता",
     description: "Find rides easily, anytime and anywhere across major Indian cities.",
@@ -35,8 +35,8 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="container py-16 md:py-24 bg-secondary/5">
-      <div className="text-center mb-12 animate-fade-slide-up">
+    <section id="features" className="container py-16 md:py-24 bg-muted/20">
+      <div className="text-center mb-12 motion-safe:animate-fade-slide-up">
         <h2 className="text-3xl md:text-4xl font-bold">Why Choose Chalo India?</h2>
         <p className="text-lg text-muted-foreground mt-2">क्यों चुनें चलो इंडिया?</p>
       </div>
@@ -44,15 +44,15 @@ export default function Features() {
         {features.map((feature, index) => (
           <Card
              key={index}
-             className="text-center shadow-lg hover:shadow-xl transition-all duration-300 transform motion-safe:hover:-translate-y-2 motion-safe:animate-fade-slide-up"
-             style={{ animationDelay: `${index * 100}ms` }} // Staggered animation
+             className="text-center shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform motion-safe:hover:-translate-y-2 motion-safe:animate-fade-slide-up group bg-background" // Added group
+             style={{ animationDelay: `${index * 120}ms`, animationFillMode: 'backwards' }} // Adjusted delay and fill mode
           >
             <CardHeader className="items-center p-6">
-               <div className="p-4 rounded-full bg-primary/10 mb-4 transform transition-transform duration-300 group-hover:scale-110">
+               <div className="p-4 rounded-full bg-primary/10 mb-4 transform transition-transform duration-300 ease-in-out group-hover:scale-110"> {/* Use group-hover */}
                  {feature.icon}
                </div>
               <CardTitle className="text-xl font-semibold">{feature.title} <span className="block text-lg text-secondary font-medium">{feature.titleHi}</span></CardTitle>
-              <CardDescription className="mt-2">{feature.description} <span className="block text-sm text-muted-foreground">{feature.descriptionHi}</span></CardDescription>
+              <CardDescription className="mt-2 text-muted-foreground">{feature.description} <span className="block text-sm">{feature.descriptionHi}</span></CardDescription>
             </CardHeader>
           </Card>
         ))}

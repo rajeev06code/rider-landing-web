@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, AppWindow } from "lucide-react"; // Added AppWindow for variety
+import { ArrowRight, MoveRight, AppWindow } from "lucide-react"; // Added MoveRight
 
 export default function Hero() {
   return (
-    <section className="container grid lg:grid-cols-2 gap-16 items-center py-20 md:py-28 lg:py-36 overflow-hidden">
+    <section className="container grid lg:grid-cols-2 gap-12 items-center py-24 md:py-32 lg:py-40 overflow-hidden">
       {/* Text Content */}
-      <div className="space-y-8 motion-safe:animate-fade-in motion-safe:slide-in-from-left-12 motion-safe:duration-700 motion-safe:ease-out">
+      <div className="space-y-8 motion-safe:animate-fade-in motion-safe:slide-in-from-left-16 motion-safe:duration-700 motion-safe:ease-out">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter leading-tight">
           Shehar Mein Kahin Bhi, Kabhi Bhi. <br />
           <span className="text-primary">Chalo India</span> Ke Saath!
@@ -16,29 +16,31 @@ export default function Hero() {
           <br />
           <span className="font-semibold text-secondary mt-2 block">शहर भर में आपकी भरोसेमंद सवारी, मिनटों में।</span>
         </p>
-         <div className="flex flex-col sm:flex-row gap-4 pt-4">
-          <Button size="lg" variant="default" asChild className="motion-safe:hover:scale-105 transition-transform duration-200 shadow-lg">
+         <div className="flex flex-col sm:flex-row gap-4 pt-6">
+          <Button size="lg" variant="default" asChild className="shadow-lg transform transition-transform duration-300 ease-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/30">
             <a href="#download">
               Get the App <ArrowRight className="ml-2 h-5 w-5" />
              </a>
           </Button>
-           <Button size="lg" variant="outline" className="motion-safe:hover:scale-105 transition-transform duration-200 border-primary text-primary hover:bg-primary/10 hover:text-primary">
-            Learn More <AppWindow className="ml-2 h-5 w-5" />
+           <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/10 hover:text-primary transform transition-transform duration-300 ease-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/20">
+            <a href="#features">
+              Learn More <MoveRight className="ml-2 h-5 w-5" />
+             </a>
           </Button>
         </div>
       </div>
 
        {/* Illustration */}
-      <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:slide-in-from-right-12 motion-safe:duration-700 motion-safe:ease-out relative">
-         {/* Background shape */}
-         <div className="absolute inset-0 -z-10 transform -rotate-6 scale-110 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl opacity-50"></div>
+      <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:slide-in-from-right-16 motion-safe:duration-700 motion-safe:ease-out relative">
+         {/* Background shape - more subtle */}
+         <div className="absolute inset-0 -z-10 transform -rotate-12 scale-125 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-full blur-3xl opacity-40"></div>
         <Image
-          src="https://picsum.photos/id/101/600/500" // New placeholder
+          src="https://picsum.photos/id/101/600/500" // Placeholder
           alt="Modern illustration showing a person booking a ride on the Chalo India app with city background"
-          data-ai-hint="ride sharing app booking illustration modern city india phone" // Updated hint
+          data-ai-hint="ride sharing app booking illustration modern city india phone map" // Added map keyword
           width={600}
-          height={500} // Adjusted height slightly
-          className="rounded-xl shadow-2xl object-cover aspect-[6/5] transform transition-transform duration-500 motion-safe:hover:scale-105"
+          height={500}
+          className="rounded-xl shadow-2xl object-cover aspect-[6/5] transform transition-transform duration-500 ease-in-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/20"
           priority // Load the hero image faster
         />
       </div>

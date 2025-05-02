@@ -80,13 +80,21 @@ export default {
   		},
   		keyframes: {
         'fade-in': {
-          from: { opacity: '0' },
-          to: { opacity: '1' },
+           '0%': { opacity: '0' },
+           '100%': { opacity: '1' },
         },
         'slide-up': {
-          from: { transform: 'translateY(20px)' },
-          to: { transform: 'translateY(0)' },
+          '0%': { opacity: '0', transform: 'translateY(10px)' }, // Start slightly lower and invisible
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+         'slide-in-from-left': {
+           '0%': { transform: 'translateX(-100%)', opacity: '0' },
+           '100%': { transform: 'translateX(0)', opacity: '1' },
+         },
+         'slide-in-from-right': {
+           '0%': { transform: 'translateX(100%)', opacity: '0' },
+           '100%': { transform: 'translateX(0)', opacity: '1' },
+         },
   			'accordion-down': {
   				from: {
   					height: '0'
@@ -105,11 +113,17 @@ export default {
   			}
   		},
   		animation: {
+        'fade-in': 'fade-in 0.5s ease-out forwards', // Make fade-in smoother
+        'slide-up': 'slide-up 0.5s ease-out forwards', // Make slide-up smoother
         'fade-slide-up': 'fade-in 0.6s ease-out forwards, slide-up 0.6s ease-out forwards',
+         'slide-in-from-left': 'slide-in-from-left 0.7s ease-out forwards',
+         'slide-in-from-right': 'slide-in-from-right 0.7s ease-out forwards',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate"), require("embla-carousel-autoplay")],
+  // The embla-carousel-autoplay plugin is deprecated, use embla-carousel-react directly
+  // plugins: [require("tailwindcss-animate"), require("embla-carousel-autoplay")],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;

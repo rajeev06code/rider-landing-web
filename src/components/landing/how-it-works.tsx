@@ -34,27 +34,27 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="container py-16 md:py-24">
-      <div className="text-center mb-12 animate-fade-slide-up">
+      <div className="text-center mb-16 motion-safe:animate-fade-slide-up"> {/* Increased margin bottom */}
         <h2 className="text-3xl md:text-4xl font-bold">Booking Kaise Karein?</h2>
          <p className="text-lg text-muted-foreground mt-2">How to Book a Ride?</p>
       </div>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-         {/* Dashed line for larger screens - purely visual */}
-        <div className="absolute top-1/2 left-0 right-0 h-0.5 border-t-2 border-dashed border-primary/30 hidden lg:block mt-[-1px]" />
+      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"> {/* Increased gap */}
+         {/* Dashed line for larger screens */}
+        <div className="absolute top-1/2 left-0 right-0 h-0.5 border-t-2 border-dashed border-primary/30 hidden lg:block mt-[-20px] z-0" /> {/* Adjusted position */}
 
         {steps.map((step, index) => (
           <div
             key={index}
-            className="relative flex flex-col items-center text-center p-6 bg-card rounded-lg shadow-lg border border-border/50 motion-safe:animate-fade-slide-up transform transition-transform duration-300 motion-safe:hover:scale-105"
-            style={{ animationDelay: `${index * 150}ms` }} // Staggered animation
+            className="relative flex flex-col items-center text-center p-6 bg-card rounded-lg shadow-lg border border-border/50 motion-safe:animate-fade-slide-up transition-all duration-300 ease-in-out motion-safe:hover:scale-105 motion-safe:hover:bg-muted/30 z-10 group" // Added hover background and group
+            style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'backwards' }} // Adjusted fill mode
           >
              {/* Circle on the dashed line */}
-             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-primary border-4 border-background hidden lg:block z-10 shadow-md" />
-            <div className="mb-4 p-4 bg-primary/10 rounded-full inline-block transform transition-transform duration-300 group-hover:rotate-12">
+             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[20px] h-4 w-4 rounded-full bg-primary border-4 border-background hidden lg:block z-20 shadow-md transition-transform duration-300 group-hover:scale-125" /> {/* Adjusted position, added hover effect */}
+            <div className="mb-4 p-4 bg-primary/10 rounded-full inline-block transform transition-transform duration-300 ease-in-out group-hover:rotate-12">
               {step.icon}
             </div>
             <h3 className="text-xl font-semibold mb-2">{step.title} <span className="block text-lg text-secondary">{step.titleHi}</span></h3>
-            <p className="text-muted-foreground">{step.description} <span className="block text-sm">{step.descriptionHi}</span></p>
+            <p className="text-muted-foreground text-sm">{step.description} <span className="block mt-1">{step.descriptionHi}</span></p> {/* Adjusted text size */}
           </div>
         ))}
       </div>

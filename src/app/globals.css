@@ -86,8 +86,14 @@ body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  /* Removed global section animation rule */
+  /* Apply fade-in animation globally for better UX, but allow overrides */
+  .motion-safe\:animate-fade-in {
+    animation-name: fade-in;
+  }
+  /* General slide-up animation */
+   .motion-safe\:animate-fade-slide-up {
+    animation: fade-slide-up 0.6s ease-out forwards;
+  }
 }
 
-/* Removed redundant keyframes and animation utility class */
-/* Animations are now defined and applied via tailwind.config.ts */
+/* Keyframes remain in tailwind.config.ts */
