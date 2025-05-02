@@ -8,42 +8,51 @@ body {
 
 @layer base {
   :root {
-    /* Dark Theme - Based on the provided image */
-    --background: 220 15% 5%; /* Very Dark Blue/Black */
-    --foreground: 0 0% 98%; /* Near white */
-    --card: 220 15% 8%; /* Slightly lighter dark card */
-    --card-foreground: 0 0% 98%;
-    --popover: 220 15% 5%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 165 70% 45%; /* Teal/Green Accent */
-    --primary-foreground: 220 15% 5%; /* Dark text on primary buttons */
-    --secondary: 217.2 32.6% 17.5%; /* Darker grayish blue */
-    --secondary-foreground: 0 0% 98%; /* Near white */
-    --muted: 217.2 32.6% 17.5%; /* Darker grayish blue */
-    --muted-foreground: 215 20.2% 65.1%; /* Lighter grayish blue */
-    --accent: 165 70% 45%; /* Teal/Green Accent */
-    --accent-foreground: 220 15% 5%; /* Dark text for contrast on accent */
-    --destructive: 0 62.8% 50.6%; /* Slightly brighter red */
-    --destructive-foreground: 0 0% 98%;
-    --border: 217.2 32.6% 17.5%; /* Darker gray */
-    --input: 217.2 32.6% 17.5%; /* Darker gray */
-    --ring: 165 70% 50%; /* Slightly brighter Teal for focus rings */
-    --chart-1: 165 70% 45%; /* Teal */
+    /* Light Theme with Purple Accent */
+    --background: 0 0% 100%; /* White */
+    --foreground: 222.2 84% 4.9%; /* Dark Slate Gray */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222.2 84% 4.9%; /* Dark Slate Gray */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 222.2 84% 4.9%; /* Dark Slate Gray */
+    --primary: 293 60% 50%; /* Purple Accent */
+    --primary-foreground: 0 0% 98%; /* Light Gray/White for contrast on purple */
+    --secondary: 210 40% 96.1%; /* Very Light Grayish Blue */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark Blue */
+    --muted: 210 40% 96.1%; /* Very Light Grayish Blue */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Medium Grayish Blue */
+    --accent: 293 60% 50%; /* Purple Accent */
+    --accent-foreground: 0 0% 98%; /* Light Gray/White */
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 98%; /* Light Gray/White */
+    --border: 214.3 31.8% 91.4%; /* Light Gray */
+    --input: 214.3 31.8% 91.4%; /* Light Gray */
+    --ring: 293 60% 55%; /* Slightly lighter Purple for focus rings */
+    --chart-1: 293 60% 50%; /* Purple */
     --chart-2: 210 40% 56.1%; /* Muted blue */
     --chart-3: 43 74% 66%; /* Orange/Yellow */
-    --chart-4: 300 100% 70%; /* Magenta */
+    --chart-4: 165 70% 45%; /* Teal/Green */
     --chart-5: 0 62.8% 50.6%; /* Red */
-    --radius: 0.5rem; /* Adjusted radius */
-    --sidebar-background: 220 15% 5%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 165 70% 45%;
-    --sidebar-primary-foreground: 220 15% 5%;
-    --sidebar-accent: 217.2 32.6% 17.5%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 217.2 32.6% 17.5%;
-    --sidebar-ring: 165 70% 50%;
+    --radius: 0.5rem;
+    /* Sidebar Specific - Assuming light sidebar */
+    --sidebar-background: 0 0% 100%; /* White */
+    --sidebar-foreground: 222.2 84% 4.9%; /* Dark Slate Gray */
+    --sidebar-primary: 293 60% 50%; /* Purple */
+    --sidebar-primary-foreground: 0 0% 98%; /* Light Gray/White */
+    --sidebar-accent: 210 40% 96.1%; /* Very Light Grayish Blue */
+    --sidebar-accent-foreground: 222.2 47.4% 11.2%; /* Dark Blue */
+    --sidebar-border: 214.3 31.8% 91.4%; /* Light Gray */
+    --sidebar-ring: 293 60% 55%; /* Slightly lighter Purple */
   }
-  /* .dark class is no longer needed as dark is default */
+
+  .dark {
+     /* You can optionally define dark mode variables here if needed later */
+     /* Example:
+     --background: 220 15% 5%;
+     --foreground: 0 0% 98%;
+     ... and so on
+     */
+  }
 }
 
 @layer base {
@@ -61,3 +70,4 @@ body {
 }
 
 /* Keyframes remain in tailwind.config.ts */
+
