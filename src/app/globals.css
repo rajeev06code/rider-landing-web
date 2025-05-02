@@ -14,8 +14,8 @@ body {
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 30 100% 55%; /* Slightly brighter Saffron */
-    --primary-foreground: 0 0% 100%; /* White for contrast on Saffron */
+    --primary: 281 51% 33%; /* New Purple */
+    --primary-foreground: 0 0% 100%; /* White for contrast on Purple */
     --secondary: 180 85% 30%; /* Slightly richer Teal */
     --secondary-foreground: 0 0% 98%; /* Near white for contrast on Teal */
     --muted: 210 40% 97%; /* Lighter grayish blue */
@@ -26,8 +26,8 @@ body {
     --destructive-foreground: 0 0% 98%;
     --border: 214.3 31.8% 91.4%; /* Light gray */
     --input: 214.3 31.8% 91.4%; /* Light gray */
-    --ring: 30 100% 55%; /* Saffron for focus rings */
-    --chart-1: 30 100% 55%; /* Saffron */
+    --ring: 281 51% 33%; /* New Purple for focus rings */
+    --chart-1: 281 51% 33%; /* New Purple */
     --chart-2: 180 85% 30%; /* Deep Teal */
     --chart-3: 300 100% 55%; /* Magenta */
     --chart-4: 43 74% 66%; /* Complementary Orange/Yellow */
@@ -35,12 +35,12 @@ body {
     --radius: 0.75rem; /* Slightly larger radius */
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 240 10% 3.9%;
-    --sidebar-primary: 30 100% 55%;
+    --sidebar-primary: 281 51% 33%; /* New Purple */
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 40% 97%;
     --sidebar-accent-foreground: 240 10% 3.9%;
     --sidebar-border: 214.3 31.8% 91.4%;
-    --sidebar-ring: 30 100% 55%;
+    --sidebar-ring: 281 51% 33%; /* New Purple */
   }
   .dark {
     --background: 240 10% 3.9%; /* Dark blue-gray */
@@ -49,7 +49,7 @@ body {
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 30 100% 60%; /* Saffron */
+    --primary: 281 51% 45%; /* Lighter Purple for dark mode */
     --primary-foreground: 0 0% 100%; /* White */
     --secondary: 180 80% 35%; /* Brighter Teal for dark mode */
     --secondary-foreground: 0 0% 98%; /* Near white */
@@ -61,20 +61,20 @@ body {
     --destructive-foreground: 0 0% 98%;
     --border: 217.2 32.6% 17.5%; /* Darker gray */
     --input: 217.2 32.6% 17.5%; /* Darker gray */
-    --ring: 30 100% 60%; /* Saffron */
-    --chart-1: 30 100% 60%;
+    --ring: 281 51% 45%; /* Lighter Purple */
+    --chart-1: 281 51% 45%; /* Lighter Purple */
     --chart-2: 180 80% 35%;
     --chart-3: 300 100% 70%;
     --chart-4: 43 74% 66%;
     --chart-5: 210 40% 56.1%;
     --sidebar-background: 240 10% 3.9%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 30 100% 60%;
+    --sidebar-primary: 281 51% 45%; /* Lighter Purple */
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 217.2 32.6% 17.5%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 217.2 32.6% 17.5%;
-    --sidebar-ring: 30 100% 70%;
+    --sidebar-ring: 281 51% 50%; /* Slightly brighter purple ring for dark mode */
   }
 }
 
@@ -85,10 +85,6 @@ body {
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
-  }
-  /* Apply fade-in animation globally for better UX, but allow overrides */
-  .motion-safe\:animate-fade-in {
-    animation-name: fade-in;
   }
   /* General slide-up animation */
    .motion-safe\:animate-fade-slide-up {
