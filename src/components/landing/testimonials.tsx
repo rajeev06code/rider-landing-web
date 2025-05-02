@@ -19,8 +19,8 @@ const testimonials = [
     location: "Delhi",
     quote: "Chalo India is my go-to app for daily commute. Super fast bikes and always available!",
     quoteHi: "चलो इंडिया मेरे दैनिक आवागमन के लिए मेरा पसंदीदा ऐप है। सुपर फास्ट बाइक और हमेशा उपलब्ध!",
-    image: "https://picsum.photos/100/100?random=1",
-    aiHint: "Indian woman smiling professional",
+    image: "https://picsum.photos/seed/priyasharma/100/100", // Seeded placeholder
+    aiHint: "smiling indian woman professional urban", // Updated hint
   },
   {
     name: "Rajesh Kumar",
@@ -28,8 +28,8 @@ const testimonials = [
     location: "Mumbai",
     quote: "The auto rides are very convenient, especially during monsoon. Fair prices too.",
     quoteHi: "ऑटो की सवारी बहुत सुविधाजनक है, खासकर मानसून के दौरान। उचित दाम भी।",
-    image: "https://picsum.photos/100/100?random=2",
-    aiHint: "Indian man casual tech",
+    image: "https://picsum.photos/seed/rajeshkumar/100/100", // Seeded placeholder
+    aiHint: "smiling indian man casual tech city", // Updated hint
   },
    {
     name: "Anjali Singh",
@@ -37,8 +37,8 @@ const testimonials = [
     location: "Bangalore",
     quote: "I feel safe using Chalo India. The drivers are professional and the app has great safety features.",
     quoteHi: "मुझे चलो इंडिया का उपयोग करके सुरक्षित महसूस होता है। ड्राइवर पेशेवर हैं और ऐप में बेहतरीन सुरक्षा सुविधाएँ हैं।",
-     image: "https://picsum.photos/100/100?random=3",
-    aiHint: "Indian student female happy",
+     image: "https://picsum.photos/seed/anjalisingh/100/100", // Seeded placeholder
+    aiHint: "happy indian female student young", // Updated hint
   },
    {
     name: "Vikram Patel",
@@ -46,8 +46,8 @@ const testimonials = [
     location: "Ahmedabad",
     quote: "Affordable and reliable. Booking is so easy, saves a lot of time. Kya mast service hai!",
     quoteHi: "किफायती और भरोसेमंद। बुकिंग बहुत आसान है, बहुत समय बचता है। क्या मस्त सर्विस है!",
-    image: "https://picsum.photos/100/100?random=4",
-    aiHint: "Indian businessman smiling glasses",
+    image: "https://picsum.photos/seed/vikrampatel/100/100", // Seeded placeholder
+    aiHint: "indian businessman smiling glasses professional", // Updated hint
   },
    {
     name: "Sunita Devi",
@@ -55,8 +55,8 @@ const testimonials = [
     location: "Kolkata",
     quote: "Finally, a good ride-hailing app for smaller cities too! Highly recommend.",
     quoteHi: "अंत में, छोटे शहरों के लिए भी एक अच्छा राइड-हेलिंग ऐप! अत्यधिक अनुशंसित।",
-    image: "https://picsum.photos/100/100?random=5",
-    aiHint: "Indian woman middle-aged saree",
+    image: "https://picsum.photos/seed/sunitadevi/100/100", // Seeded placeholder
+    aiHint: "indian woman middle-aged traditional happy", // Updated hint
    }
 ];
 
@@ -117,3 +117,4 @@ export default function Testimonials() {
     </section>
   );
 }
+```

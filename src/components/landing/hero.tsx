@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MoveRight, AppWindow } from "lucide-react"; // Added MoveRight
+import { ArrowRight, MoveRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -35,9 +35,9 @@ export default function Hero() {
          {/* Background shape - more subtle */}
          <div className="absolute inset-0 -z-10 transform -rotate-12 scale-125 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-full blur-3xl opacity-40"></div>
         <Image
-          src="https://picsum.photos/id/101/600/500" // Placeholder
-          alt="Modern illustration showing a person booking a ride on the Chalo India app with city background"
-          data-ai-hint="ride sharing app booking illustration modern city india phone map" // Added map keyword
+          src="https://picsum.photos/seed/rideapphero/600/500" // Changed placeholder seed
+          alt="Modern illustration showing a person booking a ride on the Chalo India app with a stylized city background and map elements" // Updated alt text
+          data-ai-hint="ride sharing app booking illustration modern city india phone map route auto bike stylized" // Updated AI hint
           width={600}
           height={500}
           className="rounded-xl shadow-2xl object-cover aspect-[6/5] transform transition-transform duration-500 ease-in-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/20"

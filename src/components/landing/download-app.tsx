@@ -52,9 +52,9 @@ export default function DownloadApp() {
           </div>
           <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:delay-200">
             <Image
-              src="https://picsum.photos/id/237/500/500" // Different placeholder
-              alt="Illustration of people using Chalo India app on phones with map elements"
-              data-ai-hint="mobile app download illustration india happy users map phone screen"
+              src="https://picsum.photos/seed/appdownload/500/500" // Seeded placeholder
+              alt="Illustration of people using Chalo India app on phones with map elements and download icons" // Updated alt text
+              data-ai-hint="mobile app download illustration india happy users map phone screen ride sharing" // Updated AI hint
               width={400} // Adjusted size
               height={400} // Adjusted size
               className="rounded-lg object-contain aspect-square transform transition-transform duration-500 ease-in-out motion-safe:hover:scale-105 motion-safe:hover:rotate-1 shadow-xl"
