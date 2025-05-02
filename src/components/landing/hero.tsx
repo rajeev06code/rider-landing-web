@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MoveRight } from "lucide-react";
+import heroImage from "@/assets/images/hero.png"
 
 export default function Hero() {
   return (
@@ -35,7 +36,7 @@ export default function Hero() {
         {/* Background shape - more subtle */}
         <div className="absolute inset-0 -z-10 transform -rotate-12 scale-125 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent rounded-full blur-3xl opacity-40"></div>
         <Image
-          src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-2fd8-61f7-b8fc-627ff06904f0/raw?se=2025-05-02T11%3A21%3A48Z&sp=r&sv=2024-08-04&sr=b&scid=a757a5ee-50e1-5841-9f89-55f541822ced&skoid=7c382de0-129f-486b-9922-6e4a89c6eb7d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-02T08%3A56%3A27Z&ske=2025-05-03T08%3A56%3A27Z&sks=b&skv=2024-08-04&sig=t5Y2AXB46OVkDF9qT/fDMcnA4A5ah8UxPLAnBB8AV1g%3D" // Updated image source
+          src={heroImage} // Updated image source
           alt="Illustration of a couple on a romantic getaway with a scooter" // Updated alt text
           data-ai-hint="romantic getaway couple scooter illustration travel love" // Updated AI hint
           width={600}

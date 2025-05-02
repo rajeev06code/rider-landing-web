@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import GooglePlayIcon from "@/components/icons/google-play-icon";
 import AppleStoreIcon from "@/components/icons/apple-store-icon";
+import driverImage from "@/assets/images/driver.png"
 
 export default function DownloadApp() {
   return (
@@ -49,7 +50,7 @@ export default function DownloadApp() {
           </div>
           <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:delay-200 ">
             <Image
-              src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-9114-61f7-bcf8-d558350081ab/raw?se=2025-05-02T11%3A27%3A04Z&sp=r&sv=2024-08-04&sr=b&scid=20ef0616-032d-5666-91b5-a5d5f34f9910&skoid=7c382de0-129f-486b-9922-6e4a89c6eb7d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-02T02%3A45%3A13Z&ske=2025-05-03T02%3A45%3A13Z&sks=b&skv=2024-08-04&sig=a7sS%2B%2BaciARQ4PxPx5r2%2BFdpYZfMfDaiqe9gvzBX%2B7s%3D" // Seeded placeholder
+              src={driverImage} // Seeded placeholder
               alt="Illustration of people using Riderly app on phones with map elements and download icons" // Updated alt text
               data-ai-hint="mobile app download illustration india happy users map phone screen ride sharing" // Updated AI hint
               width={600} // Adjusted size
