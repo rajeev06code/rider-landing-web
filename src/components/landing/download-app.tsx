@@ -21,7 +21,7 @@ export default function DownloadApp() {
               <Button
                 variant="secondary"
                 size="lg"
-                className="bg-primary hover:bg-primary/90 justify-start px-5 py-3 h-auto text-left transform transition-all duration-300 ease-out motion-safe:hover:scale-105 rounded-lg group"
+                className="bg-primary hover:bg-primary/90 justify-start px-5 py-3 h-auto text-left transform transition-all duration-300 ease-out motion-safe:hover:scale-105 rounded-lg group hover:text-primary border border-transparent hover:border-primary"
                 asChild
               >
                 <a href="#" target="_blank" rel="noopener noreferrer">
@@ -35,7 +35,7 @@ export default function DownloadApp() {
               <Button
                 variant="secondary"
                 size="lg"
-                className="bg-primary hover:bg-primary/90 justify-start px-5 py-3 h-auto text-left transform transition-all duration-300 ease-out motion-safe:hover:scale-105 rounded-lg group"
+                className="bg-primary hover:bg-primary/90 justify-start px-5 py-3 h-auto text-left transform transition-all duration-300 ease-out motion-safe:hover:scale-105 rounded-lg group hover:text-primary border border-transparent hover:border-primary"
                 asChild
               >
                 <a href="#" target="_blank" rel="noopener noreferrer">

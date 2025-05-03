@@ -45,7 +45,6 @@ body {
     --sidebar-ring: 293 60% 55%; /* Slightly lighter Purple */
   }
 }
-
 @layer base {
   * {
     @apply border-border;

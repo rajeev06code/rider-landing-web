@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MoveRight } from "lucide-react";
-import heroImage from "@/assets/images/hero.png"
+import heroImage from "@/assets/images/hero.png";
 
 export default function Hero() {
   return (
@@ -10,23 +10,23 @@ export default function Hero() {
       <div className="space-y-8 motion-safe:animate-fade-in motion-safe:slide-in-from-left-16 motion-safe:duration-700 motion-safe:ease-out">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter leading-tight">
           Shehar Mein Kahin Bhi, Kabhi Bhi. <br />
-          <span className="text-primary">Riderly</span> Ke Saath!
+          <span className="text-primary animate-pulse">Riderly</span> Ke Saath!
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
           Quick bikes for solo trips or comfy autos for group rides – your perfect journey is just a tap away. Experience hassle-free booking and reliable service across India.
           <br />
           <span className="font-semibold text-secondary mt-2 block">शहर भर में आपकी भरोसेमंद सवारी, मिनटों में।</span>
         </p>
-         <div className="flex flex-col sm:flex-row gap-4 pt-6">
-          <Button size="lg" variant="default" asChild className="shadow-lg transform transition-transform duration-300 ease-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/30">
+        <div className="flex flex-col sm:flex-row gap-4 pt-6">
+          <Button size="lg" variant="default" asChild className="shadow-lg transform transition-transform duration-300 ease-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/30 border border-transparent hover:border-primary">
             <a href="#download">
               Get the App <ArrowRight className="ml-2 h-5 w-5" />
-             </a>
+            </a>
           </Button>
-           <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/10 hover:text-primary transform transition-transform duration-300 ease-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/20">
+          <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary/10 hover:text-primary transform transition-transform duration-300 ease-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/20">
             <a href="#features">
               Learn More <MoveRight className="ml-2 h-5 w-5" />
-             </a>
+            </a>
           </Button>
         </div>
       </div>
@@ -48,3 +48,4 @@ export default function Hero() {
     </section>
   );
 }
+

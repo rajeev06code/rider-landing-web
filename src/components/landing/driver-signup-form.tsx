@@ -148,7 +148,7 @@ export function DriverSignupForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+        <Button type="submit" className="w-full hover:text-primary border border-transparent hover:border-primary" size="lg" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit Interest'}
         </Button>
       </form>

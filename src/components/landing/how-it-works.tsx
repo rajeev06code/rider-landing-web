@@ -1,4 +1,5 @@
 import { MapPin, Smartphone, Navigation, CheckCircle } from "lucide-react";
+import React from "react";
 
 const steps = [
   {
@@ -35,8 +36,8 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="container py-16 md:py-24">
       <div className="text-center mb-16 motion-safe:animate-fade-slide-up"> {/* Increased margin bottom */}
-        <h2 className="text-3xl md:text-4xl font-bold">Booking Kaise Karein?</h2>
-         <p className="text-lg text-muted-foreground mt-2">How to Book a Ride?</p>
+        <h2 className="text-3xl md:text-4xl font-bold font-poppins">Booking Kaise Karein?</h2>
+         <p className="text-base text-muted-foreground mt-2 font-poppins">How to Book a Ride?</p>
       </div>
       <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"> {/* Increased gap */}
          {/* Dashed line for larger screens */}
@@ -51,9 +52,9 @@ export default function HowItWorks() {
              {/* Circle on the dashed line */}
              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[20px] h-4 w-4 rounded-full bg-primary border-4 border-background hidden lg:block z-20 shadow-md transition-transform duration-300 group-hover:scale-125" /> {/* Adjusted position, added hover effect */}
             <div className="mb-4 p-4 bg-primary/10 rounded-full inline-block transform transition-transform duration-300 ease-in-out group-hover:rotate-12">
-              {step.icon}
+              {React.cloneElement(step.icon, { className: "h-10 w-10 text-primary" })}
             </div>
-            <h3 className="text-xl font-semibold mb-2">{step.title} <span className="block text-lg text-secondary">{step.titleHi}</span></h3>
+            <h3 className="text-xl font-semibold mb-2 font-poppins">{step.title} <span className="block text-lg text-secondary font-poppins">{step.titleHi}</span></h3>
             <p className="text-muted-foreground text-sm">{step.description} <span className="block mt-1">{step.descriptionHi}</span></p> {/* Adjusted text size */}
           </div>
         ))}
