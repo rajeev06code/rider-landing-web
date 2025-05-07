@@ -96,7 +96,7 @@ export default function Footer() {
             © {currentYear} ZiplyRide. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground/80 mt-1">
-            Proudly Made in India for India. ❤️ Designed & Developed with Passion.
+            Proudly Made in India for India.❤️
           </p>
         </div>
       </div>

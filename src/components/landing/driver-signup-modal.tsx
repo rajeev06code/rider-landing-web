@@ -12,15 +12,29 @@ import {
 } from "@/components/ui/dialog";
 import { UserPlus } from 'lucide-react';
 
-export function DriverSignupModal() {
-  const [open, setOpen] = useState(false);
+interface DriverSignupModalProps {
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+export function DriverSignupModal({ open, onOpenChange }: DriverSignupModalProps) {
+  const [internalOpen, setInternalOpen] = useState(false);
+  const isControlled = open !== undefined;
+
+  const handleOpenChange = (newOpen: boolean) => {
+    if (onOpenChange) {
+      onOpenChange(newOpen);
+    } else {
+      setInternalOpen(newOpen);
+    }
+  };
 
   const handleFormSuccess = () => {
-    setOpen(false); // Close the modal on successful form submission
+    handleOpenChange(false); // Close the modal on successful form submission
   };
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={isControlled ? open : internalOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         <Button
           className="hidden md:inline-flex transform transition-transform duration-200 motion-safe:hover:scale-105 text-base"
@@ -41,7 +55,7 @@ export function DriverSignupModal() {
           </DialogDescription>
         </DialogHeader>
         <div className="p-6 pt-0 max-h-[70vh] overflow-y-auto">
-          <DriverSignupForm onSuccess={handleFormSuccess} /> {/* Pass onSuccess handler */}
+          <DriverSignupForm onSuccess={handleFormSuccess} />
         </div>
       </DialogContent>
     </Dialog>
