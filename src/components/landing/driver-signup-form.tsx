@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import * as React from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -25,16 +25,22 @@ import { toast } from 'sonner';
 import { Bike } from 'lucide-react';
 import AutoIcon from '@/components/icons/auto-icon';
 
+const nameRegexMessage =
+  'Name must be at least 2 characters. नाम कम से कम 2 अक्षरों का होना चाहिए।';
+const phoneRegexMessage =
+  'Phone number must be at least 10 digits. फ़ोन नंबर कम से कम 10 अंकों का होना चाहिए।';
+const cityRegexMessage =
+  'City must be at least 2 characters. शहर का नाम कम से कम 2 अक्षरों का होना चाहिए।';
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters. नाम कम से कम 2 अक्षरों का होना चाहिए।' }),
+  name: z.string().min(2, { message: nameRegexMessage }),
   phone: z
     .string()
-    .min(10, { message: 'Phone number must be at least 10 digits. फ़ोन नंबर कम से कम 10 अंकों का होना चाहिए।' })
-    .regex(/^\d{10,15}$/, { message: 'Please enter a valid phone number. कृपया एक वैध फ़ोन नंबर दर्ज करें।' }),
-  city: z.string().min(2, { message: 'City must be at least 2 characters. शहर का नाम कम से कम 2 अक्षरों का होना चाहिए।' }),
-  vehicleType: z.enum(['bike', 'auto'], {
-    required_error: 'You need to select a vehicle type. आपको वाहन का प्रकार चुनना होगा।',
-  }),
+    .min(10, { message: phoneRegexMessage })
+    .regex(/^\d{10,15}$/, {
+      message: 'Please enter a valid phone number. कृपया एक वैध फ़ोन नंबर दर्ज करें।',
+    }),
+  city: z.string().min(2, { message: cityRegexMessage }),
+  vehicleType: z.enum(['bike', 'auto'], { required_error: 'You need to select a vehicle type. आपको वाहन का प्रकार चुनना होगा।' }),
 });
 
 type DriverSignupFormValues = z.infer<typeof formSchema>;
@@ -76,13 +82,18 @@ export function DriverSignupForm({ onSuccess }: DriverSignupFormProps) {
         }
       } else {
         const errorData = await response.json().catch(() => ({ message: 'Submission failed. Please try again.' }));
-        toast.error('Submission Failed! जमा करने में विफल!', {
-          description: errorData.message || 'An unknown error occurred. कृपया पुनः प्रयास करें।',
+        toast.error('Submission Failed! जमा करने में विफल!',{
+          description: errorData.message ||
+            'An unknown error occurred. कृपया पुनः प्रयास करें।',
           duration: 5000,
         });
       }
     } catch (error) {
-      toast.error('Submission Failed! जमा करने में विफल!', {
+      toast.error(
+        'Submission Failed! जमा करने में विफल!',
+        {
+        
+
         description: 'An error occurred while submitting the form. कृपया पुनः प्रयास करें।',
         duration: 5000,
       });
@@ -101,7 +112,13 @@ export function DriverSignupForm({ onSuccess }: DriverSignupFormProps) {
             <FormItem>
               <FormLabel className="font-semibold">Full Name (पूरा नाम)</FormLabel>
               <FormControl>
-                <Input id="name" placeholder="e.g., Rahul Kumar (राहुल कुमार)" {...field} disabled={isSubmitting} className="text-base py-3 px-4"/>
+                <Input
+                  id="name"
+                  placeholder="e.g., Rahul Kumar (राहुल कुमार)"
+                  {...field}
+                  disabled={isSubmitting}
+                  className="text-base py-3 px-4"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -114,7 +131,13 @@ export function DriverSignupForm({ onSuccess }: DriverSignupFormProps) {
             <FormItem>
               <FormLabel className="font-semibold">Phone Number (फ़ोन नंबर)</FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="e.g., 9876543210" {...field} disabled={isSubmitting} className="text-base py-3 px-4"/>
+                <Input
+                  type="tel"
+                  placeholder="e.g., 9876543210"
+                  {...field}
+                  disabled={isSubmitting}
+                  className="text-base py-3 px-4"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -127,7 +150,12 @@ export function DriverSignupForm({ onSuccess }: DriverSignupFormProps) {
             <FormItem>
               <FormLabel className="font-semibold">City (शहर)</FormLabel>
               <FormControl>
-                <Input placeholder="e.g., Delhi (दिल्ली)" {...field} disabled={isSubmitting} className="text-base py-3 px-4"/>
+                <Input
+                  placeholder="e.g., Delhi (दिल्ली)"
+                  {...field}
+                  disabled={isSubmitting}
+                  className="text-base py-3 px-4"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -138,19 +166,32 @@ export function DriverSignupForm({ onSuccess }: DriverSignupFormProps) {
           name="vehicleType"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="font-semibold">Vehicle Type (वाहन का प्रकार)</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isSubmitting}>
+              <FormLabel className="font-semibold">
+                Vehicle Type (वाहन का प्रकार)
+              </FormLabel>
+              <Select
+                onValueChange={field.onChange}
+                defaultValue={field.value}
+                disabled={isSubmitting}
+              >
                 <FormControl>
                   <SelectTrigger className="text-base py-3 px-4">
-                    <SelectValue placeholder="Select vehicle type (वाहन का प्रकार चुनें)" />
+                    <SelectValue placeholder="Select vehicle type (वाहन का प्रकार चुनें)"
+                    />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
                   <SelectItem value="bike">
-                    <span className='flex items-center'><Bike className="h-5 w-5 mr-2 inline-block text-primary" />Bike (बाइक)</span>
+                    <span className="flex items-center">
+                      <Bike className="h-5 w-5 mr-2 inline-block text-primary" />
+                      Bike (बाइक)
+                    </span>
                   </SelectItem>
                   <SelectItem value="auto">
-                     <span className='flex items-center'><AutoIcon className="h-5 w-5 mr-2 inline-block text-primary" />Auto Rickshaw (ऑटो रिक्शा)</span>
+                    <span className="flex items-center">
+                      <AutoIcon className="h-5 w-5 mr-2 inline-block text-primary" />
+                      Auto Rickshaw (ऑटो रिक्शा)
+                    </span>
                   </SelectItem>
                 </SelectContent>
               </Select>

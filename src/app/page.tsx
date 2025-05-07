@@ -32,12 +32,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Riderly Rides - Book Bike & Auto Rides Across India</title>
+        <title>ZiplyRide - Book Bike & Auto Rides Across India</title>
         <meta
           name="description"
-          content="Riderly Rides offers fast, safe, and affordable bike and auto taxi services in India. Download the app to book your ride in minutes or sign up as a driver partner!"
+          content="ZiplyRide offers fast, safe, and affordable bike and auto taxi services in India. Download the app to book your ride in minutes or sign up as a driver partner!"
         />
-        <meta name="keywords" content="Riderly Rides, bike taxi, auto taxi, ride hailing India, book ride, affordable rides, driver signup, Chalo India" />
+        <meta name="keywords" content="ZiplyRide, bike taxi, auto taxi, ride hailing India, book ride, affordable rides, driver signup, Chalo India" />
       </Head>
       <div className="flex flex-col min-h-dvh relative bg-background" ref={mainRef}>
         <Header />

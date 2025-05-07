@@ -32,7 +32,7 @@ export default function Header() {
         <Link href="/" className="flex items-center space-x-2 group">
             <AutoIcon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-110" />
             <span className="text-3xl font-bold tracking-tight transition-colors duration-300 group-hover:text-primary">
-                Riderly
+                ZiplyRide
             </span>
         </Link>
           
@@ -53,13 +53,7 @@ export default function Header() {
 
         <div className="flex items-center space-x-3">
           <DriverSignupModal />
-          <Button
-            variant="outline"
-            size="lg"
-            className="hidden md:inline-flex border-primary text-primary hover:bg-primary/10 hover:text-primary transform transition-transform duration-200 motion-safe:hover:scale-105"
-          >
-            <LogIn className="mr-2 h-5 w-5" /> Rider Login
-          </Button>
+        
           
           {/* Mobile Menu */}
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -73,7 +67,7 @@ export default function Header() {
                   <SheetHeader className="p-6 border-b border-border/40">
                     <SheetTitle className="flex items-center space-x-2">
                       <AutoIcon className="h-8 w-8 text-primary" />
-                      <span className="text-2xl font-bold text-primary">Riderly Rides</span>
+                      <span className="text-2xl font-bold text-primary">ZiplyRide Rides</span>
                     </SheetTitle>
                     <SheetDescription className="text-sm text-muted-foreground">
                         Your city, your ride. Apka sheher, apki sawari.

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import GooglePlayIcon from "@/components/icons/google-play-icon";
 import AppleStoreIcon from "@/components/icons/apple-store-icon";
+import driverImage from "@/assets/images/driver.png"
 
 export default function DownloadApp() {
   return (
@@ -54,14 +55,14 @@ export default function DownloadApp() {
               </Button>
             </div>
           </div>
-          <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:delay-200">
+          <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:delay-200 ">
             <Image
-              src="https://picsum.photos/seed/riderlyapp/600/600"
-              alt="Illustration showing people using the Riderly app on mobile phones, with map elements and app download icons, in an Indian urban setting."
-              data-ai-hint="mobile app download india ride sharing phone screen map interface happy users"
-              width={500} 
-              height={500}
-              className="object-contain aspect-square transform transition-transform duration-500 ease-in-out motion-safe:hover:scale-105 rounded-xl shadow-2xl"
+              src={driverImage} // Seeded placeholder
+              alt="Illustration of people using Riderly app on phones with map elements and download icons" // Updated alt text
+              data-ai-hint="mobile app download illustration india happy users map phone screen ride sharing" // Updated AI hint
+              width={600} // Adjusted size
+              height={600} // Adjusted size
+              className=" object-contain aspect-square transform transition-transform duration-500 ease-in-out "
             />
           </div>
         </div>

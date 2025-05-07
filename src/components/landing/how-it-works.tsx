@@ -7,8 +7,8 @@ const steps = [
     icon: <Smartphone className="h-12 w-12 text-primary" />,
     title: "1. Download & Sign Up",
     titleHi: "१. ऐप डाउनलोड और साइन अप करें",
-    description: "Get the Riderly app from your app store and create your account in minutes.",
-    descriptionHi: "अपने ऐप स्टोर से राइडरली ऐप प्राप्त करें और मिनटों में अपना खाता बनाएं।",
+    description: "Get the ZiplyRide app from your app store and create your account in minutes.",
+    descriptionHi: "अपने ऐप स्टोर से ZiplyRide ऐप प्राप्त करें और मिनटों में अपना खाता बनाएं।",
   },
   {
     icon: <MapPin className="h-12 w-12 text-primary" />,
@@ -37,8 +37,8 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="container py-16 md:py-24 bg-background">
       <div className="text-center mb-16 motion-safe:animate-fade-slide-up">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Booking Riderly is Easy!</h2>
-         <p className="text-xl text-muted-foreground mt-3">राइडरली बुक करना है एकदम आसान!</p>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Booking ZiplyRide is Easy!</h2>
+         <p className="text-xl text-muted-foreground mt-3">ZiplyRide बुक करना है एकदम आसान!</p>
       </div>
       <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 lg:gap-x-12">
         {/* Dashed line connecting cards for larger screens - Improved visuals */}
