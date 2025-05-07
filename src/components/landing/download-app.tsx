@@ -1,65 +1,74 @@
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import GooglePlayIcon from "@/components/icons/google-play-icon";
 import AppleStoreIcon from "@/components/icons/apple-store-icon";
-import driverImage from "@/assets/images/driver.png"
 
 export default function DownloadApp() {
   return (
-    <section id="download" className="relative overflow-hidden ">
+    <section id="download" className="relative overflow-hidden bg-muted/30">
       <div className="container py-16 md:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 motion-safe:animate-fade-slide-up ">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Get Started Today!</h2>
-            <h3 className="text-2xl md:text-3xl font-semibold opacity-90">आज ही शुरू करें!</h3>
-            <p className="text-lg md:text-xl opacity-90 max-w-lg">
-              Download the Riderly app and experience seamless travel across your city. Ab safar hoga aasaan!
+          <div className="space-y-6 text-center lg:text-left">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              Ready to Ride? <span className="block text-primary">Get Riderly Now!</span>
+            </h2>
+            <h3 className="text-2xl md:text-3xl font-semibold text-secondary opacity-90">
+              सफ़र के लिए तैयार? <span className="block">अभी राइडरली पाएं!</span>
+            </h3>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0">
+              Download the Riderly app for seamless bike and auto rides across your city. Your next journey is just a tap away! Ab safar hoga super aasaan!
               <br />
-              <span className="font-medium block mt-1">राइडरली ऐप डाउनलोड करें और अपने शहर में सहज यात्रा का अनुभव करें।</span>
+              <span className="font-medium text-foreground/80 mt-2 block">
+                अपने शहर में आसान बाइक और ऑटो राइड्स के लिए राइडरली ऐप डाउनलोड करें। आपकी अगली यात्रा बस एक टैप दूर है! अब सफर होगा सुपर आसान!
+              </span>
             </p>    
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center lg:justify-start">
               <Button
-                variant="secondary"
+                variant="default" 
                 size="lg"
-                className="bg-primary hover:bg-primary/90 justify-start px-5 py-3 h-auto text-left transform transition-all duration-300 ease-out motion-safe:hover:scale-105 rounded-lg group hover:text-primary border border-transparent hover:border-primary"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 justify-start px-6 py-4 h-auto text-left transform transition-all duration-300 ease-out motion-safe:hover:scale-105 rounded-lg group shadow-lg hover:shadow-primary/40"
                 asChild
               >
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <GooglePlayIcon className="h-8 w-8 mr-3 text-green-500 transition-transform duration-300 group-hover:scale-110" />
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Get Riderly on Google Play">
+                  <GooglePlayIcon className="h-8 w-8 mr-3 text-green-400 transition-transform duration-300 group-hover:scale-110" />
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground">Get it on</p>
+                    <p className="text-xs uppercase tracking-wider opacity-80">Get it on</p>
                     <p className="text-xl font-semibold">Google Play</p>
                   </div>
                 </a>
               </Button>
               <Button
-                variant="secondary"
+                variant="secondary" 
                 size="lg"
-                className="bg-primary hover:bg-primary/90 justify-start px-5 py-3 h-auto text-left transform transition-all duration-300 ease-out motion-safe:hover:scale-105 rounded-lg group hover:text-primary border border-transparent hover:border-primary"
+                className="bg-secondary text-secondary-foreground hover:bg-secondary/90 justify-start px-6 py-4 h-auto text-left transform transition-all duration-300 ease-out motion-safe:hover:scale-105 rounded-lg group shadow-lg hover:shadow-secondary/40"
                 asChild
               >
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <AppleStoreIcon className="h-8 w-8 mr-3 text-gray-700 dark:text-gray-300 transition-transform duration-300 group-hover:scale-110" />
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Download Riderly on the App Store">
+                  <AppleStoreIcon className="h-8 w-8 mr-3 text-foreground/70 transition-transform duration-300 group-hover:scale-110" />
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground">Download on the</p>
+                    <p className="text-xs uppercase tracking-wider opacity-80">Download on the</p>
                     <p className="text-xl font-semibold">App Store</p>
                   </div>
                 </a>
               </Button>
             </div>
           </div>
-          <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:delay-200 ">
+          <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:delay-200">
             <Image
-              src={driverImage} // Seeded placeholder
-              alt="Illustration of people using Riderly app on phones with map elements and download icons" // Updated alt text
-              data-ai-hint="mobile app download illustration india happy users map phone screen ride sharing" // Updated AI hint
-              width={600} // Adjusted size
-              height={600} // Adjusted size
-              className=" object-contain aspect-square transform transition-transform duration-500 ease-in-out "
+              src="https://picsum.photos/seed/riderlyapp/600/600"
+              alt="Illustration showing people using the Riderly app on mobile phones, with map elements and app download icons, in an Indian urban setting."
+              data-ai-hint="mobile app download india ride sharing phone screen map interface happy users"
+              width={500} 
+              height={500}
+              className="object-contain aspect-square transform transition-transform duration-500 ease-in-out motion-safe:hover:scale-105 rounded-xl shadow-2xl"
             />
           </div>
         </div>
       </div>
+       {/* Decorative background elements */}
+      <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/5 rounded-full opacity-50 blur-3xl -z-10"></div>
+      <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-secondary/5 rounded-full opacity-50 blur-3xl -z-10"></div>
     </section>
   );
 }

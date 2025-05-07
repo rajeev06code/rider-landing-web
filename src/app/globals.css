@@ -45,7 +45,13 @@ body {
     --sidebar-ring: 293 60% 55%; /* Slightly lighter Purple */
   }
 }
+.map-container {
+  height: 500px;
+}
+
 @layer base {
+
+
   * {
     @apply border-border;
   }

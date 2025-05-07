@@ -1,79 +1,81 @@
 
 import Link from "next/link";
 import AutoIcon from "@/components/icons/auto-icon";
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Youtube, Navigation } from 'lucide-react'; // Added Youtube, Navigation
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted/40 border-t border-border/40 pt-16 pb-8">
+    <footer className="bg-muted/50 border-t border-border/40 pt-16 pb-8 text-foreground">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand and Description */}
-          <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center space-x-2 group mb-2">
-              <AutoIcon className="h-8 w-8 text-primary transition-transform duration-300 group-hover:rotate-[15deg]" />
-              <span className="text-xl font-bold transition-colors duration-300 group-hover:text-primary">Riderly Rides</span>
+          <div className="lg:col-span-1 space-y-4">
+            <Link href="/" className="flex items-center space-x-3 group mb-4">
+              <AutoIcon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-110" />
+              <span className="text-2xl font-bold transition-colors duration-300 group-hover:text-primary">Riderly Rides</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Your reliable partner for affordable and convenient bike and auto rides across India. Safar Karo, Befikar Raho!
+              Your reliable partner for affordable and convenient bike and auto rides across India. Quick, Safe, and Always on Time!
             </p>
              <p className="text-muted-foreground text-sm">
-               भारत भर में सस्ती और सुविधाजनक बाइक और ऑटो राइड के लिए आपका विश्वसनीय साथी।
+               भारत भर में सस्ती और सुविधाजनक बाइक और ऑटो राइड्स के लिए आपका विश्वसनीय साथी। तेज़, सुरक्षित और हमेशा समय पर!
              </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Quick Links</h4>
-            <nav className="flex flex-col space-y-2">
-              <Link href="#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">Features</Link>
-              <Link href="#how-it-works" className="text-sm text-muted-foreground hover:text-primary transition-colors">How It Works</Link>
-              <Link href="#testimonials" className="text-sm text-muted-foreground hover:text-primary transition-colors">Testimonials</Link>
-              <Link href="#download" className="text-sm text-muted-foreground hover:text-primary transition-colors">Download App</Link>
-              <Link href="#driver-signup" className="text-sm text-muted-foreground hover:text-primary transition-colors">Become a Driver</Link>
+            <h4 className="font-semibold text-lg mb-6 text-primary">Quick Links</h4>
+            <nav className="flex flex-col space-y-3">
+              <Link href="#features" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">Features (विशेषताएं)</Link>
+              <Link href="#how-it-works" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">How It Works (कैसे काम करता है)</Link>
+              <Link href="#testimonials" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">Testimonials (ग्राहक प्रतिक्रिया)</Link>
+              <Link href="#download" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">Download App (ऐप डाउनलोड करें)</Link>
+              <Link href="#driver-signup" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">Become a Driver (ड्राइवर बनें)</Link>
             </nav>
           </div>
 
-          {/* Legal */}
+          {/* Legal & Support */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Legal</h4>
-            <nav className="flex flex-col space-y-2">
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms & Conditions</Link>
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
-               {/* <Link href="/faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">FAQ</Link> */}
+            <h4 className="font-semibold text-lg mb-6 text-primary">Support & Legal</h4>
+            <nav className="flex flex-col space-y-3">
+              <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">Contact Us (संपर्क करें)</Link>
+              <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">Terms & Conditions (नियम एवं शर्तें)</Link>
+              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">Privacy Policy (गोपनीयता नीति)</Link>
+              {/* <Link href="/faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">FAQ (अक्सर पूछे जाने वाले प्रश्न)</Link> */}
             </nav>
           </div>
 
-          {/* Contact & Social */}
+          {/* Connect With Us */}
           <div>
-            <h4 className="font-semibold mb-4 text-foreground">Connect</h4>
-             <nav className="flex flex-col space-y-2 mb-4">
-               <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact Us</Link>
-             </nav>
+            <h4 className="font-semibold text-lg mb-6 text-primary">Connect With Us</h4>
+            <p className="text-sm text-muted-foreground mb-4">Follow us on social media for updates and offers.</p>
             <div className="flex space-x-3">
-              <Button variant="outline" size="icon" className="rounded-full hover:bg-primary/10 hover:border-primary group" asChild>
-                 <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                  <Facebook className="h-4 w-4 text-muted-foreground group-hover:text-primary" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full hover:bg-primary/10 hover:border-primary group" asChild>
-                 <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-4 w-4 text-muted-foreground group-hover:text-primary" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full hover:bg-primary/10 hover:border-primary group" asChild>
-                 <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="h-4 w-4 text-muted-foreground group-hover:text-primary" />
-                </a>
-              </Button>
-               <Button variant="outline" size="icon" className="rounded-full hover:bg-primary/10 hover:border-primary group" asChild>
-                 <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="h-4 w-4 text-muted-foreground group-hover:text-primary" />
-                </a>
-              </Button>
+              {[
+                { icon: Facebook, label: "Facebook", href: "#" },
+                { icon: Twitter, label: "Twitter", href: "#" },
+                { icon: Instagram, label: "Instagram", href: "#" },
+                { icon: Linkedin, label: "LinkedIn", href: "#" },
+                { icon: Youtube, label: "YouTube", href: "#" },
+              ].map(social => (
+                <Button key={social.label} variant="outline" size="icon" className="rounded-full hover:bg-primary/10 hover:border-primary group border-border/60 transition-all duration-300 hover:scale-110" asChild>
+                  <a href={social.href} aria-label={social.label} target="_blank" rel="noopener noreferrer">
+                    <social.icon className="h-5 w-5 text-muted-foreground group-hover:text-primary" />
+                  </a>
+                </Button>
+              ))}
+            </div>
+            <div className="mt-6">
+              <h5 className="font-medium text-md mb-2 text-primary/90">Newsletter</h5>
+              <p className="text-xs text-muted-foreground mb-2">Subscribe for latest updates (नवीनतम अपडेट के लिए सदस्यता लें).</p>
+              <form className="flex gap-2">
+                <input type="email" placeholder="Enter your email" className="flex-grow p-2 rounded-md border border-input bg-background text-sm focus:ring-primary focus:border-primary" />
+                <Button type="submit" variant="default" size="sm" className="transform transition-transform duration-200 motion-safe:hover:scale-105">
+                  <Navigation className="h-4 w-4 mr-1" /> Go
+                </Button>
+              </form>
             </div>
           </div>
         </div>
@@ -81,7 +83,10 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-border/40 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Riderly Rides. All rights reserved. Crafted with ❤️ in Bihar.
+            © {currentYear} Riderly Rides (A Unit of Chalo India Ventures Pvt. Ltd.). All rights reserved.
+          </p>
+          <p className="text-xs text-muted-foreground/80 mt-1">
+            Proudly Made in India for India. ❤️ Designed & Developed with Passion.
           </p>
         </div>
       </div>

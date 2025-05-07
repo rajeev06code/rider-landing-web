@@ -1,49 +1,49 @@
+'use client';
 import { useState } from 'react';
 import { DriverSignupForm } from './driver-signup-form';
-import { Modal, Box, IconButton, Typography } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
 import { Button } from '@/components/ui/button';
-
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  borderRadius:2,
-  p: 4,
-};
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { UserPlus } from 'lucide-react';
 
 export function DriverSignupModal() {
   const [open, setOpen] = useState(false);
-  const handleClose = () => setOpen(false);
+
+  const handleFormSuccess = () => {
+    setOpen(false); // Close the modal on successful form submission
+  };
 
   return (
-    <>
-      <Modal open={open} onClose={handleClose}>
-        <Box sx={style}>
-         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-            <Typography variant="h6" component="h2">
-              Driver Sign Up
-            </Typography>
-            <IconButton onClick={handleClose} aria-label="close">
-              <CloseIcon />
-            </IconButton>
-          </Box>
-           <Box>
-            <DriverSignupForm />
-          </Box>
-        </Box>
-      </Modal>
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>
         <Button
-          onClick={() => setOpen(true)}
-          className="hidden md:inline-flex transform transition-transform duration-200 motion-safe:hover:scale-105"
-          variant="secondary"
+          className="hidden md:inline-flex transform transition-transform duration-200 motion-safe:hover:scale-105 text-base"
+          variant="default"
           size="lg"
-        >Driver Sign Up</Button>
-    </>
+        >
+          <UserPlus className="mr-2 h-5 w-5" /> Driver Sign Up / पार्टनर बनें
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[525px] bg-card p-0">
+        <DialogHeader className="p-6 pb-4">
+          <DialogTitle className="text-2xl font-semibold flex items-center">
+            <UserPlus className="h-7 w-7 mr-3 text-primary" /> Become a Riderly Driver Partner
+          </DialogTitle>
+          <DialogDescription className="text-muted-foreground">
+            Fill in your details to express interest. We'll guide you through the next steps.
+            <br/>अपनी रुचि व्यक्त करने के लिए अपना विवरण भरें। हम आपको अगले चरणों में मार्गदर्शन करेंगे।
+          </DialogDescription>
+        </DialogHeader>
+        <div className="p-6 pt-0 max-h-[70vh] overflow-y-auto">
+          <DriverSignupForm onSuccess={handleFormSuccess} /> {/* Pass onSuccess handler */}
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 }

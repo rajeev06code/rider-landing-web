@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -22,27 +21,32 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Bike, IndianRupee, UserPlus } from 'lucide-react';
 import { toast } from 'sonner';
+import { Bike } from 'lucide-react';
 import AutoIcon from '@/components/icons/auto-icon';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  name: z.string().min(2, { message: 'Name must be at least 2 characters. नाम कम से कम 2 अक्षरों का होना चाहिए।' }),
   phone: z
     .string()
-    .min(10, { message: 'Phone number must be at least 10 digits.' })
-    .regex(/^\d+$/, { message: 'Phone number must contain only digits.' }),
-  city: z.string().min(2, { message: 'City must be at least 2 characters.' }),
+    .min(10, { message: 'Phone number must be at least 10 digits. फ़ोन नंबर कम से कम 10 अंकों का होना चाहिए।' })
+    .regex(/^\d{10,15}$/, { message: 'Please enter a valid phone number. कृपया एक वैध फ़ोन नंबर दर्ज करें।' }),
+  city: z.string().min(2, { message: 'City must be at least 2 characters. शहर का नाम कम से कम 2 अक्षरों का होना चाहिए।' }),
   vehicleType: z.enum(['bike', 'auto'], {
-    required_error: 'You need to select a vehicle type.',
+    required_error: 'You need to select a vehicle type. आपको वाहन का प्रकार चुनना होगा।',
   }),
 });
 
-export function DriverSignupForm() {
+type DriverSignupFormValues = z.infer<typeof formSchema>;
+
+interface DriverSignupFormProps {
+  onSuccess?: () => void;
+}
+
+export function DriverSignupForm({ onSuccess }: DriverSignupFormProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<DriverSignupFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
@@ -51,7 +55,7 @@ export function DriverSignupForm() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: DriverSignupFormValues) {
     setIsSubmitting(true);
     try {
       const response = await fetch('/api/driver-interest', {
@@ -62,15 +66,27 @@ export function DriverSignupForm() {
         body: JSON.stringify(values),
       });
       if (response.ok) {
-        toast.success('Application Submitted!');
-        toast.success(`Thanks ${values.name}, we've received your interest. We'll contact you soon on ${values.phone}.`);
+        toast.success('Application Submitted! आवेदन जमा हो गया!', {
+          description: `Thanks ${values.name}, we've received your interest. We'll contact you soon on ${values.phone}. धन्यवाद ${values.name}, हमें आपकी रुचि प्राप्त हुई है। हम जल्द ही आपसे ${values.phone} पर संपर्क करेंगे।`,
+          duration: 5000,
+        });
+        form.reset();
+        if (onSuccess) {
+          onSuccess();
+        }
       } else {
-        toast.error('Message Submission Failed!');
+        const errorData = await response.json().catch(() => ({ message: 'Submission failed. Please try again.' }));
+        toast.error('Submission Failed! जमा करने में विफल!', {
+          description: errorData.message || 'An unknown error occurred. कृपया पुनः प्रयास करें।',
+          duration: 5000,
+        });
       }
     } catch (error) {
-      toast.error('Message Submission Failed!');
+      toast.error('Submission Failed! जमा करने में विफल!', {
+        description: 'An error occurred while submitting the form. कृपया पुनः प्रयास करें।',
+        duration: 5000,
+      });
     } finally {
-      form.reset();
       setIsSubmitting(false);
     }
   }
@@ -83,9 +99,9 @@ export function DriverSignupForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Full Name</FormLabel>
+              <FormLabel className="font-semibold">Full Name (पूरा नाम)</FormLabel>
               <FormControl>
-                <Input placeholder="e.g., Rahul Kumar" {...field} disabled={isSubmitting} />
+                <Input id="name" placeholder="e.g., Rahul Kumar (राहुल कुमार)" {...field} disabled={isSubmitting} className="text-base py-3 px-4"/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -96,9 +112,9 @@ export function DriverSignupForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone Number</FormLabel>
+              <FormLabel className="font-semibold">Phone Number (फ़ोन नंबर)</FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="e.g., 9876543210" {...field} disabled={isSubmitting} />
+                <Input type="tel" placeholder="e.g., 9876543210" {...field} disabled={isSubmitting} className="text-base py-3 px-4"/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -109,9 +125,9 @@ export function DriverSignupForm() {
           name="city"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>City</FormLabel>
+              <FormLabel className="font-semibold">City (शहर)</FormLabel>
               <FormControl>
-                <Input placeholder="e.g., Delhi" {...field} disabled={isSubmitting} />
+                <Input placeholder="e.g., Delhi (दिल्ली)" {...field} disabled={isSubmitting} className="text-base py-3 px-4"/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -122,25 +138,19 @@ export function DriverSignupForm() {
           name="vehicleType"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Vehicle Type</FormLabel>
+              <FormLabel className="font-semibold">Vehicle Type (वाहन का प्रकार)</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isSubmitting}>
                 <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select vehicle type" />
+                  <SelectTrigger className="text-base py-3 px-4">
+                    <SelectValue placeholder="Select vehicle type (वाहन का प्रकार चुनें)" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
                   <SelectItem value="bike">
-                    <span className="flex items-center">
-                      <Bike className="h-4 w-4 mr-2 inline-block" />
-                      Bike
-                    </span>
+                    <span className='flex items-center'><Bike className="h-5 w-5 mr-2 inline-block text-primary" />Bike (बाइक)</span>
                   </SelectItem>
                   <SelectItem value="auto">
-                    <span className="flex items-center">
-                      <AutoIcon className="h-4 w-4 mr-2 inline-block" />
-                      Auto Rickshaw
-                    </span>
+                     <span className='flex items-center'><AutoIcon className="h-5 w-5 mr-2 inline-block text-primary" />Auto Rickshaw (ऑटो रिक्शा)</span>
                   </SelectItem>
                 </SelectContent>
               </Select>
@@ -148,8 +158,8 @@ export function DriverSignupForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full hover:text-primary border border-transparent hover:border-primary" size="lg" disabled={isSubmitting}>
-          {isSubmitting ? 'Submitting...' : 'Submit Interest'}
+        <Button type="submit" className="w-full text-base py-3 mt-4 shadow-md hover:shadow-lg transform transition-all duration-300 ease-out motion-safe:hover:scale-105 motion-safe:hover:shadow-primary/30" size="lg" disabled={isSubmitting}>
+          {isSubmitting ? 'Submitting (जमा हो रहा है)...' : 'Submit Interest (रुचि जमा करें)'}
         </Button>
       </form>
     </Form>
