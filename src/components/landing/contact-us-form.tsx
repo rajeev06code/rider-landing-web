@@ -12,14 +12,14 @@ export default function DriverSignupSection() {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <div className="inline-flex items-center rounded-lg bg-primary/10 px-4 py-2 text-sm font-semibold text-primary mb-4 shadow-sm">
-            <IndianRupee className="h-5 w-5 mr-2" /> Riderly के साथ कमाएं (Earn with Riderly)
+            <IndianRupee className="h-5 w-5 mr-2" /> ZiplyRide के साथ कमाएं (Earn with ZiplyRide)
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Join Our Driver Team!</h2>
           <h3 className="text-3xl md:text-4xl font-semibold text-secondary">
           हमारे ड्राइवर पार्टनर बनें!
           </h3>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Become a Riderly driver partner and earn flexibly on your own schedule. Drive your bike or auto, be your own boss, and connect with your city.
+            Become a ZiplyRide driver partner and earn flexibly on your own schedule. Drive your bike or auto, be your own boss, and connect with your city.
              <br />
              <span className="font-medium text-foreground/80 mt-2 block">राइडरली ड्राइवर पार्टनर बनें और अपने समय पर लचीले ढंग से कमाएं। अपनी बाइक या ऑटो चलाएं, खुद के बॉस बनें, और अपने शहर से जुड़ें।</span>
           </p>

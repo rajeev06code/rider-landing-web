@@ -22,7 +22,7 @@ const LoyaltyProgram: React.FC = () => {
   const loyaltyFeatures = [
     {
       icon: <Coins className="mx-auto h-14 w-14 text-primary" />,
-      title: "Earn Riderly Points",
+      title: "Earn ZiplyRide Points",
       titleHi: "राइडरली पॉइंट्स कमाएं",
       description: "Collect points for every ride you take. More rides mean more points!",
       descriptionHi: "हर सवारी पर पॉइंट्स जमा करें। ज़्यादा राइड्स, ज़्यादा पॉइंट्स!"
@@ -38,7 +38,7 @@ const LoyaltyProgram: React.FC = () => {
       icon: <Users className="mx-auto h-14 w-14 text-primary" />,
       title: "Refer & Earn Big",
       titleHi: "रेफर करें और बड़ा कमाएं",
-      description: "Invite friends to Riderly. Both you and your friends get rewards!",
+      description: "Invite friends to ZiplyRide. Both you and your friends get rewards!",
       descriptionHi: "दोस्तों को राइडरली पर आमंत्रित करें। आप और आपके दोस्त, दोनों को इनाम मिलेगा!"
     },
     {
@@ -62,7 +62,7 @@ const LoyaltyProgram: React.FC = () => {
         variants={titleVariants}
         className="text-4xl md:text-5xl font-bold text-center mb-4 tracking-tight"
       >
-        Riderly Rewards: Ride More, Save More!
+        ZiplyRide Rewards: Ride More, Save More!
       </motion.h2>
       <motion.p
         variants={titleVariants}

@@ -38,8 +38,8 @@ export default function Features() {
   return (
     <section id="features" className="container py-16 md:py-24 bg-muted/20">
       <div className="text-center mb-16 motion-safe:animate-fade-slide-up">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Why Ride with Riderly?</h2>
-        <p className="text-xl text-muted-foreground mt-3">क्यों चुनें राइडरली के साथ अपना सफ़र?</p>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Why Ride with ZiplyRide?</h2>
+        <p className="text-xl text-muted-foreground mt-3">क्यों चुनें ZiplyRide के साथ अपना सफ़र?</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature, index) => (

@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="lg:col-span-1 space-y-4">
             <Link href="/" className="flex items-center space-x-3 group mb-4">
               <AutoIcon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-110" />
-              <span className="text-2xl font-bold transition-colors duration-300 group-hover:text-primary">Riderly Rides</span>
+              <span className="text-2xl font-bold transition-colors duration-300 group-hover:text-primary">ZiplyRide Rides</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Your reliable partner for affordable and convenient bike and auto rides across India. Quick, Safe, and Always on Time!
@@ -83,7 +83,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-border/40 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Riderly Rides (A Unit of Chalo India Ventures Pvt. Ltd.). All rights reserved.
+            © {currentYear} ZiplyRide. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground/80 mt-1">
             Proudly Made in India for India. ❤️ Designed & Developed with Passion.

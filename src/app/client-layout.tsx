@@ -32,17 +32,17 @@ export default function ClientRootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* Open Graph Tags */}
-        <meta property="og:title" content="Riderly Rides - Book Bike & Auto Rides in India" />
-        <meta property="og:description" content="Riderly Rides: Your go-to app for fast, safe, and affordable bike and auto rides across India. Book your next ride in minutes or sign up to drive!" />
+        <meta property="og:title" content="ZiplyRide Rides - Book Bike & Auto Rides in India" />
+        <meta property="og:description" content="ZiplyRide Rides: Your go-to app for fast, safe, and affordable bike and auto rides across India. Book your next ride in minutes or sign up to drive!" />
         <meta property="og:image" content="https://img.freepik.com/free-vector/romantic-getaway-illustration-concept_114360-765.jpg?semt=ais_hybrid&w=740" />
         <meta property="og:url" content="https://www.riderlyrides.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Riderly Rides" />
+        <meta property="og:site_name" content="ZiplyRide Rides" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Riderly Rides - Book Bike & Auto Rides in India" />
-        <meta name="twitter:description" content="Riderly Rides: Your go-to app for fast, safe, and affordable bike and auto rides across India. Book your next ride in minutes or sign up to drive!" />
+        <meta name="twitter:title" content="ZiplyRide Rides - Book Bike & Auto Rides in India" />
+        <meta name="twitter:description" content="ZiplyRide Rides: Your go-to app for fast, safe, and affordable bike and auto rides across India. Book your next ride in minutes or sign up to drive!" />
         <meta name="twitter:image" content="https://img.freepik.com/free-vector/romantic-getaway-illustration-concept_114360-765.jpg?semt=ais_hybrid&w=740" />
       </head>
       <body className="min-h-screen bg-background text-foreground antialiased">

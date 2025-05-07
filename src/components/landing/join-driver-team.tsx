@@ -55,13 +55,13 @@ export default function JoinDriverTeam() {
   return (
     <div className="flex flex-col md:flex-row items-center p-6 w-full max-w-7xl mx-auto my-12 bg-stone-50 rounded-2xl">
       <div className="md:w-1/2 pr-6">
-        <div className="text-gray-500 font-medium">💰 Earn with Riderly</div>
+        <div className="text-gray-500 font-medium">💰 Earn with ZiplyRide</div>
         <h2 className="text-3xl md:text-4xl font-bold mt-2">
           Join Our Driver Team!
         </h2>
         <h2 className="text-2xl font-bold text-gray-800 mt-2">हमारे ड्राइवर टीम में शामिल हों!</h2>
         <p className="text-gray-600 mt-4">
-          Become a Riderly driver partner and earn flexibly on your own schedule. Drive your bike or auto and be your own boss.
+          Become a ZiplyRide driver partner and earn flexibly on your own schedule. Drive your bike or auto and be your own boss.
         </p>
         <p className="text-gray-600 mt-2">चलो इंडिया ड्राइवर पार्टनर बनें और अपने समय पर लचीले ढंग से कमाएं।</p>
         <ul className="mt-6 space-y-2 text-gray-600">

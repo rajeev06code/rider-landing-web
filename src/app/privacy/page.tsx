@@ -2,9 +2,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Riderly Rides - Privacy Policy",
-  description: "Riderly Rides Privacy Policy: Learn how we collect, use, and protect your personal information when you use our bike and auto ride-hailing services.",
-}; //TODO: Update the metadata to reflect the change of Riderly Rides to ZiplyRide
+  title: "ZiplyRide Rides - Privacy Policy",
+  description: "ZiplyRide Rides Privacy Policy: Learn how we collect, use, and protect your personal information when you use our bike and auto ride-hailing services.",
+}; //TODO: Update the metadata to reflect the change of ZiplyRide Rides to ZiplyRide
 
 import Header from "@/components/landing/header";
 import Footer from "@/components/landing/footer";
@@ -14,11 +14,11 @@ export default function PrivacyPage() {
     <div className="flex flex-col min-h-dvh"> 
       <Header />
       <main className="flex-1 container py-16 md:py-24">
-        <h1 className="text-3xl md:text-4xl font-bold mb-8">Privacy Policy for Riderly Rides</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-8">Privacy Policy for ZiplyRide Rides</h1>
         <div className="prose dark:prose-invert max-w-none space-y-4">
           <p className="font-semibold">Last updated: {new Date().toLocaleDateString()}</p>
           <p>
-            Your privacy is important to us. It is Riderly Rides's policy to respect your privacy regarding any information we may collect from you across our website, app, and other sites we own and operate.
+            Your privacy is important to us. It is ZiplyRide Rides's policy to respect your privacy regarding any information we may collect from you across our website, app, and other sites we own and operate.
           </p> 
           <h2 className="text-2xl font-semibold mt-6">Information We Collect</h2>
           <p>
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
              We are committed to protecting your data. We implement commercially acceptable security measures to prevent loss and theft, as well as unauthorized access, disclosure, copying, use, or modification of your personal information.
            </p>
           <h2 className="text-2xl font-semibold mt-6">Your Rights</h2>
-           <p>You have the right to access, update, or delete your personal information. You can manage your information through your Riderly Rides app settings or by contacting our support team. You also have the right to opt-out of certain communications.</p>
+           <p>You have the right to access, update, or delete your personal information. You can manage your information through your ZiplyRide Rides app settings or by contacting our support team. You also have the right to opt-out of certain communications.</p>
           <p> 
             This policy is effective as of the last updated date. We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
           </p>

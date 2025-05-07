@@ -36,17 +36,17 @@ export default function Header() {
             </span>
         </Link>
           
-        <nav className="hidden gap-8 text-lg font-medium md:flex items-center">            
-            <Link href="#features" className="text-foreground/80 transition-colors hover:text-primary hover:font-semibold">
+        <nav className="hidden gap-8 text-lg md:flex items-center">            
+            <Link href="#features" className="text-foreground/80 font-semibold transition-colors hover:text-primary">
               Features
             </Link>
-            <Link href="#how-it-works" className="text-foreground/80 transition-colors hover:text-primary hover:font-semibold">
+            <Link href="#how-it-works" className="text-foreground/80 font-semibold transition-colors hover:text-primary">
               How it Works
             </Link>
-             <Link href="#testimonials" className="text-foreground/80 transition-colors hover:text-primary hover:font-semibold">
+             <Link href="#testimonials" className="text-foreground/80 font-semibold transition-colors hover:text-primary">
               Loved By Riders
             </Link>
-            <Link href="#download" className="text-foreground/80 transition-colors hover:text-primary hover:font-semibold">
+            <Link href="#download" className="text-foreground/80 font-semibold transition-colors hover:text-primary">
               Get App
             </Link>
         </nav>

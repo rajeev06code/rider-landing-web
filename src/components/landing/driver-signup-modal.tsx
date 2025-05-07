@@ -33,7 +33,7 @@ export function DriverSignupModal() {
       <DialogContent className="sm:max-w-[525px] bg-card p-0">
         <DialogHeader className="p-6 pb-4">
           <DialogTitle className="text-2xl font-semibold flex items-center">
-            <UserPlus className="h-7 w-7 mr-3 text-primary" /> Become a Riderly Driver Partner
+            <UserPlus className="h-7 w-7 mr-3 text-primary" /> Become a ZiplyRide Driver Partner
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
             Fill in your details to express interest. We'll guide you through the next steps.

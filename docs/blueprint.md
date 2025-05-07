@@ -1,4 +1,4 @@
-# **App Name**: Riderly Rides
+# **App Name**: ZiplyRide Rides
 
 ## Core Features:
 

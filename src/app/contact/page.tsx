@@ -9,7 +9,7 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-dvh">
       <Header />
       <main className="flex-1 container py-16 md:py-24">
-        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">Contact Riderly Rides</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">Contact ZiplyRide Rides</h1>
          <p className="text-lg text-muted-foreground text-center mb-12">
            Hamse sampark karein - We'd love to hear from you! Reach out for any support or inquiries.
          </p>
@@ -53,7 +53,7 @@ export default function ContactPage() {
               <CardTitle>Our Office</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground">Riderly Rides HQ</p>
+              <p className="text-muted-foreground">ZiplyRide Rides HQ</p>
               <p>123 Tech Park, Cyber City</p>
               <p>Gurugram, Haryana, India</p>
             </CardContent>

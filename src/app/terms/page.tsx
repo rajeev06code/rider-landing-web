@@ -49,7 +49,7 @@ export default function TermsPage() {
           </ul>
           <h2 className="text-2xl font-semibold mt-6">User Accounts</h2>
            <p>To use certain features of our Services (e.g., booking rides), you may be required to create an account. You must provide accurate and complete information and keep your account information updated. You are responsible for maintaining the confidentiality of your account login information and are fully responsible for all activities that occur under your account.</p>
-           <p>Riderly Rides reserves the right to suspend or terminate your account at any time for any breach of these Terms.</p>
+           <p>ZiplyRide Rides reserves the right to suspend or terminate your account at any time for any breach of these Terms.</p>
 
           <h2 className="text-2xl font-semibold mt-6">Ride Booking and Services</h2>        
             <ul>
@@ -66,13 +66,13 @@ export default function TermsPage() {
           <h2 className="text-2xl font-semibold mt-6">Payment Terms</h2>
           <p>Payment for rides is processed through the app using integrated payment gateways. You agree to pay all fares and charges associated with your use of the Services.</p>
           <p>We accept various forms of payment, including credit/debit cards and digital payment methods, as available in the app.</p>
-          <p>All transactions are processed securely. Riderly Rides does not store your full card details.</p>
+          <p>All transactions are processed securely. ZiplyRide Rides does not store your full card details.</p>
           <p>Cancellation fees may apply if you cancel a ride after a certain period or if a Driver has already started moving towards your pickup location.</p>        
           <p>Any disputes regarding payment should be reported to our customer support immediately.</p>
 
           <h2 className="text-2xl font-semibold mt-6">Limitation of Liability</h2>
-           <p>To the fullest extent permitted by applicable law, Riderly Rides shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the services; (b) any conduct or content of any third party on the services, including without limitation, any defamatory, offensive or illegal conduct of other users or third parties; (c) any content obtained from the services; or (d) unauthorized access, use or alteration of your transmissions or content.</p>
-           <p>Riderly Rides does not guarantee the quality, suitability, safety, or ability of third-party Drivers. You agree that the entire risk arising out of your use of the Services, and any service or good requested in connection therewith, remains solely with you.</p>
+           <p>To the fullest extent permitted by applicable law, ZiplyRide Rides shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the services; (b) any conduct or content of any third party on the services, including without limitation, any defamatory, offensive or illegal conduct of other users or third parties; (c) any content obtained from the services; or (d) unauthorized access, use or alteration of your transmissions or content.</p>
+           <p>ZiplyRide Rides does not guarantee the quality, suitability, safety, or ability of third-party Drivers. You agree that the entire risk arising out of your use of the Services, and any service or good requested in connection therewith, remains solely with you.</p>
           
           <h2 className="text-2xl font-semibold mt-6">Changes to Terms</h2>       
           <p>ZiplyRide reserves the right to modify these terms at any time. We will notify you of any changes by posting the new Terms and Conditions on this page and updating the "Last updated" date. Your continued use of the Services after such changes constitutes your acceptance of the new Terms.</p>
