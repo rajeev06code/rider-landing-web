@@ -1,0 +1,10 @@
+{
+  "/api/contact/route": "/api/contact",
+  "/_not-found/page": "/_not-found",
+  "/api/driver-interest/route": "/api/driver-interest",
+  "/favicon.ico/route": "/favicon.ico",
+  "/contact/page": "/contact",
+  "/page": "/",
+  "/terms/page": "/terms",
+  "/privacy/page": "/privacy"
+}
