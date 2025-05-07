@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react';
 import { Menu, X, LogIn, UserPlus } from 'lucide-react'; // Added LogIn, UserPlus
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import logo from "@/assets/images/logo.png"
+import Image from 'next/image';
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,10 +32,20 @@ export default function Header() {
     )}>
       <div className="container flex h-full max-w-screen-2xl items-center justify-between">        
         <Link href="/" className="flex items-center space-x-2 group">
-            <AutoIcon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-110" />
+        <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:delay-200 ">
+            <Image
+              src={logo} // Seeded placeholder
+              alt="Illustration of people using ZiplyRide app on phones with map elements and download icons" // Updated alt text
+              data-ai-hint="mobile app download illustration india happy users map phone screen ride sharing" // Updated AI hint
+              width={90} // Adjusted size
+              height={80} // Adjusted size
+              className=" object-contain aspect-square transform transition-transform duration-500 ease-in-out "
+            />
+          </div>
+            {/* <AutoIcon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-110" />
             <span className="text-3xl font-bold tracking-tight transition-colors duration-300 group-hover:text-primary">
                 ZiplyRide
-            </span>
+            </span> */}
         </Link>
           
         <nav className="hidden gap-8 text-lg md:flex items-center">            

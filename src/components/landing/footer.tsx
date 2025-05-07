@@ -3,6 +3,8 @@ import Link from "next/link";
 import AutoIcon from "@/components/icons/auto-icon";
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Navigation } from 'lucide-react'; // Added Youtube, Navigation
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import logo from "@/assets/images/logo.png"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,8 +16,16 @@ export default function Footer() {
           {/* Brand and Description */}
           <div className="lg:col-span-1 space-y-4">
             <Link href="/" className="flex items-center space-x-3 group mb-4">
-              <AutoIcon className="h-10 w-10 text-primary transition-transform duration-300 group-hover:rotate-[15deg] group-hover:scale-110" />
-              <span className="text-2xl font-bold transition-colors duration-300 group-hover:text-primary">ZiplyRide Rides</span>
+            <div className="flex justify-center lg:justify-end motion-safe:animate-fade-in motion-safe:delay-200 ">
+            <Image
+              src={logo} // Seeded placeholder
+              alt="Illustration of people using ZiplyRide app on phones with map elements and download icons" // Updated alt text
+              data-ai-hint="mobile app download illustration india happy users map phone screen ride sharing" // Updated AI hint
+              width={90} // Adjusted size
+              height={80} // Adjusted size
+              className=" object-contain aspect-square transform transition-transform duration-500 ease-in-out "
+            />
+          </div>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Your reliable partner for affordable and convenient bike and auto rides across India. Quick, Safe, and Always on Time!
